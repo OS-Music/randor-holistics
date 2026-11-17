@@ -1,0 +1,2219 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ד"ר שמואל רנדור - רפואה הוליסטית והדרכת בריאות</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2c6e63;
+      --primary-dark: #1d4d45;
+      --primary-light: #e8f2f0;
+      --sage: #6b8e78;
+      --warm-sand: #f6f4ef;
+      --bg-page: #ffffff;
+      --bg-card: #ffffff;
+      --text-main: #2b3331;
+      --text-muted: #5c6865;
+      --border-color: #dde5e2;
+      --shadow-xs: 0 1px 4px rgba(29, 77, 69, 0.06);
+      --shadow-sm: 0 4px 14px rgba(29, 77, 69, 0.08);
+      --shadow-md: 0 10px 28px rgba(29, 77, 69, 0.12);
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Assistant', 'Heebo', Arial, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.82;
+      font-size: 17px;
+      direction: rtl;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* סרגל ניווט עליון מלא מקצה לקצה */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .nav-container {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--sage));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-family: 'Heebo', sans-serif;
+      font-size: 1.18rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      line-height: 1.25;
+    }
+
+    .brand-sub {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.4rem 0.75rem;
+      font-size: 1.25rem;
+      color: var(--primary-dark);
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.25rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-family: 'Heebo', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+    }
+
+    /* באנר ראשי רחב מקצה לקצה */
+    .hero {
+      position: relative;
+      width: 100%;
+      background-image:
+        linear-gradient(180deg, rgba(21, 56, 50, 0.74) 0%, rgba(28, 72, 64, 0.82) 100%),
+        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      padding: 5.5rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      padding: 0.3rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Heebo', sans-serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.1rem);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-en {
+      font-size: 1.2rem;
+      opacity: 0.92;
+      direction: ltr;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    .hero-credentials {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: var(--radius);
+      padding: 1rem 1.6rem;
+      margin: 0 auto 1.6rem;
+      max-width: 780px;
+      font-size: 1.08rem;
+    }
+
+    .hero-lead {
+      font-size: 1.12rem;
+      max-width: 840px;
+      margin: 0 auto 1rem;
+      opacity: 0.96;
+      font-weight: 400;
+    }
+
+    .hero-cta {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    /* כפתורים */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.72rem 1.5rem;
+      border-radius: 6px;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 500;
+      font-size: 0.98rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-white {
+      background: #ffffff;
+      color: var(--primary-dark);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    }
+
+    .btn-white:hover {
+      background: var(--warm-sand);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-soft {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 0.55rem 1.1rem;
+      font-size: 0.94rem;
+      border: 1px solid #c6dcd7;
+    }
+
+    .btn-soft:hover,
+    .btn-soft.active-toggle {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    /* מקטעים ברוחב מלא */
+    section {
+      width: 100%;
+      padding: 4.25rem 2rem;
+    }
+
+    section.alt-bg {
+      background-color: var(--warm-sand);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 2.6rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Heebo', sans-serif;
+      font-size: clamp(1.75rem, 3.2vw, 2.3rem);
+      font-weight: 600;
+      color: var(--primary-dark);
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: "";
+      display: block;
+      width: 56px;
+      height: 3px;
+      background: var(--sage);
+      margin: 0.6rem auto 0;
+      border-radius: 3px;
+    }
+
+    /* פס פתיחה של עמוד השירותים */
+    .sites-intro-split {
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 2.2rem;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .sites-intro-split img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sites-intro-split h3 {
+      font-family: 'Heebo', sans-serif;
+      color: var(--primary-dark);
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* סינון שירותים */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      font-family: 'Heebo', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .filter-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    /* כרטיסיות שירותים */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.75rem;
+      align-items: stretch;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card.hidden {
+      display: none;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .service-card-img {
+      width: 100%;
+      height: 205px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .service-card-body {
+      padding: 1.65rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    .service-card h3 {
+      font-family: 'Heebo', sans-serif;
+      color: var(--primary-dark);
+      font-size: 1.24rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .service-card p {
+      text-align: justify;
+      margin-bottom: 1.2rem;
+      color: var(--text-main);
+    }
+
+    .service-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+
+    /* פאנל נפתח באותו עמוד */
+    .service-full-panel {
+      display: none;
+      margin-top: 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-right: 5px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      box-shadow: var(--shadow-md);
+      animation: fadeIn 0.25s ease;
+    }
+
+    .service-full-panel.open {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .panel-header h3 {
+      font-family: 'Heebo', sans-serif;
+      color: var(--primary-dark);
+      font-size: 1.42rem;
+    }
+
+    .panel-close-btn {
+      background: var(--warm-sand);
+      border: 1px solid var(--border-color);
+      color: var(--primary-dark);
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .panel-close-btn:hover {
+      background: var(--primary-light);
+    }
+
+    .systemic-intro-box {
+      background: var(--warm-sand);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .service-full-panel p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .service-full-panel ul {
+      margin: 0.75rem 0 1.25rem 0;
+      padding-right: 1.4rem;
+    }
+
+    .service-full-panel li {
+      margin-bottom: 0.65rem;
+    }
+
+    /* אודות + תמונת פורטרט של ד"ר שמואל רנדור */
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .about-header-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.25rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.8rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .doctor-portrait-frame {
+      flex-shrink: 0;
+      width: 210px;
+      background: var(--warm-sand);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 0.55rem;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .doctor-portrait-frame img {
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 8px;
+    }
+
+    .doctor-portrait-caption {
+      font-size: 0.84rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+      margin-top: 0.45rem;
+    }
+
+    .about-top {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .about-top h3 {
+      font-family: 'Heebo', sans-serif;
+      font-size: 1.6rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.45rem;
+    }
+
+    .about-subtitle {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 1.08rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .cv-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 0.35rem 0.95rem;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .about-card h4 {
+      font-family: 'Heebo', sans-serif;
+      font-size: 1.18rem;
+      color: var(--primary-dark);
+      margin: 1.65rem 0 0.85rem;
+    }
+
+    .styled-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .styled-list li {
+      position: relative;
+      padding-right: 1.4rem;
+    }
+
+    .styled-list li::before {
+      content: "•";
+      position: absolute;
+      right: 0;
+      top: -0.05rem;
+      color: var(--primary);
+      font-size: 1.4rem;
+      line-height: 1.2;
+    }
+
+    details.publications-box {
+      margin-top: 1.85rem;
+      background: var(--warm-sand);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+    }
+
+    details.publications-box summary {
+      font-family: 'Heebo', sans-serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    details.publications-box summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.publications-box summary::after {
+      content: "+";
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    details.publications-box[open] summary::after {
+      content: "−";
+    }
+
+    .pub-list {
+      direction: ltr;
+      text-align: left;
+      margin-top: 1.1rem;
+      padding-left: 1.3rem;
+      font-size: 0.95rem;
+    }
+
+    .pub-list li {
+      margin-bottom: 0.75rem;
+    }
+
+    .pub-subhead {
+      direction: ltr;
+      text-align: left;
+      font-weight: 700;
+      margin-top: 1.2rem;
+      color: var(--primary-dark);
+    }
+
+    /* הרצאות סדנאות וקורסים */
+    .lectures-banner-strip {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 2rem;
+      align-items: center;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .lectures-banner-strip img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .lectures-toc {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 2.25rem;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .lectures-toc h3 {
+      font-family: 'Heebo', sans-serif;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .toc-link {
+      display: block;
+      background: var(--warm-sand);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      color: var(--primary-dark);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .toc-link:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .syllabus-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-right: 4px solid var(--primary);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin-bottom: 1.75rem;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .syllabus-card.en-card {
+      direction: ltr;
+      text-align: left;
+      border-right: 1px solid var(--border-color);
+      border-left: 4px solid var(--primary);
+    }
+
+    .syllabus-card h3 {
+      font-family: 'Heebo', sans-serif;
+      color: var(--primary-dark);
+      font-size: 1.32rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .syllabus-sub {
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .syllabus-card p {
+      margin-bottom: 0.9rem;
+    }
+
+    .syllabus-card ul,
+    .syllabus-card ol {
+      margin: 0.75rem 0 1rem 1.3rem;
+      padding-right: 1.3rem;
+    }
+
+    .syllabus-card.en-card ul {
+      padding-right: 0;
+      padding-left: 1.3rem;
+    }
+
+    .syllabus-card li {
+      margin-bottom: 0.55rem;
+    }
+
+    .sub-workshop {
+      background: var(--warm-sand);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.4rem;
+      margin-top: 1.15rem;
+    }
+
+    .sub-workshop h4 {
+      font-family: 'Heebo', sans-serif;
+      color: var(--primary-dark);
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .back-top-row {
+      margin-top: 1.25rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      direction: rtl;
+    }
+
+    .back-top-link {
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.94rem;
+    }
+
+    .back-top-link:hover {
+      text-decoration: underline;
+    }
+
+    /* מאמרי בריאות הוליסטית */
+    .holistic-visual-header {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .holistic-pillar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-xs);
+      text-align: center;
+    }
+
+    .holistic-pillar img {
+      width: 100%;
+      height: 185px;
+      object-fit: cover;
+    }
+
+    .holistic-pillar-caption {
+      padding: 0.9rem 1rem;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 600;
+      color: var(--primary-dark);
+      font-size: 1.05rem;
+    }
+
+    .article-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 2.25rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .article-card h3 {
+      font-family: 'Heebo', sans-serif;
+      color: var(--primary-dark);
+      font-size: 1.38rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .article-meta {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1.15rem;
+      font-size: 0.96rem;
+    }
+
+    .article-card p {
+      margin-bottom: 0.95rem;
+      text-align: justify;
+    }
+
+    /* צור קשר */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .contact-info-card,
+    .contact-form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .contact-clinic-img {
+      width: 100%;
+      height: 195px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-info-card h3,
+    .contact-form-card h3 {
+      font-family: 'Heebo', sans-serif;
+      color: var(--primary-dark);
+      margin-bottom: 0.85rem;
+      font-size: 1.3rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      margin-top: 1.1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid var(--warm-sand);
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-icon {
+      min-width: 56px;
+      height: 36px;
+      border-radius: 6px;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .nav-apps {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-pill {
+      display: inline-block;
+      background: var(--warm-sand);
+      border: 1px solid var(--border-color);
+      padding: 0.22rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: #fcfcfb;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: #ffffff;
+    }
+
+    .form-note {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 0.65rem;
+    }
+
+    /* פוטר ברוחב מלא */
+    footer {
+      width: 100%;
+      background: var(--primary-dark);
+      color: #e8f2f0;
+      text-align: center;
+      padding: 2.5rem 2rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin: 0.9rem 0;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* רספונסיביות */
+    @media (max-width: 860px) {
+      .sites-intro-split,
+      .lectures-banner-strip,
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .holistic-visual-header {
+        grid-template-columns: 1fr;
+      }
+
+      .about-header-grid {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .doctor-portrait-frame {
+        width: 200px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      section,
+      .hero,
+      footer,
+      .nav-container {
+        padding-left: 1.15rem;
+        padding-right: 1.15rem;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      nav {
+        width: 100%;
+        display: none;
+      }
+
+      nav.open {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        padding-top: 0.5rem;
+      }
+
+      nav a {
+        display: block;
+        padding: 0.6rem 0.85rem;
+      }
+
+      .about-card,
+      .syllabus-card,
+      .article-card,
+      .service-full-panel {
+        padding: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- תפריט ניווט עליון -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="brand">
+        <span class="brand-mark">ש"ר</span>
+        <span class="brand-text">
+          <span class="brand-title">ד"ר שמואל רנדור - רפואה הוליסטית והדרכת בריאות</span>
+          <span class="brand-sub">Dr. Shmuel Randor .M.D., N.D &bull; ראש פינה</span>
+        </span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="תפריט ניווט">☰</button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="#home">בית</a></li>
+          <li><a href="#services">שירותים</a></li>
+          <li><a href="#about">אודות</a></li>
+          <li><a href="#contact">צור קשר</a></li>
+          <li><a href="#lectures">הרצאות סדנאות וקורסים</a></li>
+          <li><a href="#holistic">בריאות הוליסטית - מהי ?</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- באנר ראשי רחב -->
+  <section id="home" class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">גוף &bull; נפש &bull; סביבה</div>
+      <h1>ד"ר שמואל רנדור</h1>
+      <div class="hero-en">Dr. Shmuel Randor .M.D., N.D</div>
+
+      <div class="hero-credentials">
+        <strong>עוסק ברפואה משולבת:</strong><br>
+        קונבנציונלית (כללית, משנת 1976) ומשלימה (נטורופתית רב-תחומית משנת 1989)
+      </div>
+
+      <p class="hero-lead">
+        רקע אקדמי ומדעי; ניסיון רב בשדה החינוך לבריאות והדרכת בריאות כמרצה ומנחה סדנאות וקורסים לקהלים מגוונים.
+      </p>
+      <p class="hero-lead">
+        שרותי רפואה והדרכת בריאות הוליסטיים/מערכתיים (נפש-גוף-סביבה). אבחון וטיפול רב-תחומי, מידע והכשרה באורחות חיים תומכי ומקדמי בריאות.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-white">צור קשר</a>
+        <a href="#services" class="btn btn-outline">שירותים</a>
+        <a href="#lectures" class="btn btn-outline">הרצאות סדנאות וקורסים</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- מקטע שירותים -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>שירותים</h2>
+      </div>
+
+      <div class="sites-intro-split">
+        <div>
+          <h3>שרותי רפואה (קונוונציונאלית/כללית ונטורופתית) והדרכת בריאות מערכתיים (הוליסטיים)</h3>
+          <p>
+            לשימור, החלמה, והשבחה מתמשכת של תשתיות ומנגנוני בריאות ואיכות חיים במהלך ימים ושנים. השירות מותאם ליחידים, למשפחות ולקבוצות, ולארגונים, מוסדות חינוך ורשויות — מתוך ראייה שלמה של האדם כיחידה המשלבת גוף, נפש ומיקרו-אקולוגיה.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80"
+            alt="איזון גוף נפש וסביבה בטבע"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <div class="filter-bar" role="tablist" aria-label="סינון שירותים">
+        <button class="filter-btn active" data-filter="all">הכל</button>
+        <button class="filter-btn" data-filter="individuals">ליחידים - פרטי</button>
+        <button class="filter-btn" data-filter="groups">לקבוצות</button>
+        <button class="filter-btn" data-filter="organizations">לאירגונים וגופים אחרים</button>
+      </div>
+
+      <div class="services-grid">
+        <!-- כרטיס שירות 1 -->
+        <article class="service-card" data-category="individuals">
+          <img
+            class="service-card-img"
+            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80"
+            alt="ייעוץ רפואי והדרכת בריאות ליחידים"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <div>
+              <h3>ליחידים - פרטי</h3>
+              <p>
+                בנוסף לתהליכי אימון והשבחת בריאות ואיכות חיים, גם - לפי הצורך: על בסיס של הערכת מצב אבחנתית ותפקודית מערכתית יסודית, תוצע תוכנית תמיכה טיפולית רב-תחומית, כולל בראיה קונוונציונאלית (שילובי אלמנטים של תזונה רפואית, צמחי מרפא, רפואה סינית, הומאופתיה קלסית, רפואה פיזיקלית, התעמלות רפואית, רפואה ידנית, פסיכותרפיה ועוד)...
+              </p>
+            </div>
+            <div class="service-actions">
+              <button type="button" class="btn btn-soft" data-expand="panel-individuals">קרא עוד — פירוט מלא ↓</button>
+              <a href="#contact" class="btn btn-primary" style="padding: 0.55rem 1rem; font-size: 0.92rem;">תיאום פגישה</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- כרטיס שירות 2 -->
+        <article class="service-card" data-category="groups">
+          <img
+            class="service-card-img"
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80"
+            alt="סדנאות והרצאות לקבוצות ומשפחות"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <div>
+              <h3>לקבוצות</h3>
+              <p>
+                משפחות, וקבוצות קטנות עד כ-25 איש - סדנאות: מידע תאורטי והתנסותי. קבוצות גדולות יותר - בנוסף למידע תאורטי (הרצאה), ניתן, בכפוף למספר המשתתפים ולאילוצי זמן, לחוות ולתרגל בצורה פחות או יותר מפורטת ומעמיקה מרכיבים בסיסיים של בריאות מערכתית...
+              </p>
+            </div>
+            <div class="service-actions">
+              <button type="button" class="btn btn-soft" data-expand="panel-groups">קרא עוד — פירוט מלא ↓</button>
+              <a href="#lectures" class="btn btn-primary" style="padding: 0.55rem 1rem; font-size: 0.92rem;">לרשימת הסדנאות</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- כרטיס שירות 3 -->
+        <article class="service-card" data-category="organizations">
+          <img
+            class="service-card-img"
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+            alt="תוכניות קידום בריאות לארגונים ומוסדות"
+            loading="lazy"
+          />
+          <div class="service-card-body">
+            <div>
+              <h3>לאירגונים וגופים אחרים (בתי עסק/מפעלים, בתי ספר, רשויות מוניציפליות ועוד)</h3>
+              <p>
+                מוצעות תוכניות קידום בריאות מערכתיות המתייחסות באופן מודולרי ומשולב לאורחות חיים, ליחסי גומלין בקהילה, לשיקולים אקולוגיים (כולל בטיחותיים), לשירותי בריאות רלוונטיים ולמדיניות פעילה של האירגון/גוף ביחס לתחום הפורמאלי של קידום בריאות...
+              </p>
+            </div>
+            <div class="service-actions">
+              <button type="button" class="btn btn-soft" data-expand="panel-organizations">קרא עוד — פירוט מלא ↓</button>
+              <a href="#workshop-6" class="btn btn-primary" style="padding: 0.55rem 1rem; font-size: 0.92rem;">הכשרת נאמני בריאות</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- פאנל נפתח 1: ליחידים - פרטי -->
+      <div class="service-full-panel" id="panel-individuals">
+        <div class="panel-header">
+          <h3>ליחידים - פרטי (פירוט מלא)</h3>
+          <button type="button" class="panel-close-btn" data-close-panel>✕ סגור מקטע</button>
+        </div>
+
+        <div class="systemic-intro-box">
+          <p><strong>שרותי רפואה (קונוונציונאלית/כללית ונטורופתית) והדרכת בריאות מערכתיים (הוליסטיים) לשימור, החלמה, והשבחה מתמשכת של תשתיות ומנגנוני בריאות ואיכות חיים במהלך ימים ושנים</strong></p>
+          <p>
+            תשתיות ומנגנוני בריאות הפרט (גוף-נפש-סביבה) -- משמע: גורמים ושיקולים המזוהים בדרך כלל, דידקטית, כ<strong>גופניים</strong> (כנשימה, תזונה, עיכול, הפרשות, פעילות עצבית, זרימת דם, חיסון, יציבה, תנועתיות וכו'), <strong>נפשיים</strong> (גישה ערכית/מצפונית מודעות, רצון, משמעת ושליטה עצמית, ביטוי רגשות, ניהול וניתוב מתחים -- כולל ניהול סדרי עדיפויות וזמן, תקשורת בין-אישית, למידה ויצירתיות וכו') <strong>ומיקרו-אקולוגיים</strong> (בסביבתו המיידית של האדם - כסוג ביגוד, רהוט, ריכוזי כימיקלים או קרינה, איכות התאורה, אקוסטיקה ואסטטיקה, בעלי חיים, צמחיה וכו'). ברור מאוד כיום ששלושת מימדים אלה מקושרים ושלובים מערכתית, בכל תחומי ורבדי הבריאות והרפואה האישית והציבורית.
+          </p>
+          <p style="margin-bottom: 0;">
+            כחלק מהתייחסות טיפולית/רפואית למצב חולני נתון, או כמשימה בפני עצמה -- מושם דגש מרכזי על הקנייה מדורגת וגמישה של מידע, כלים, שיטות ומיומנויות באורחות חיים (התנהגויות בריאותיות) המסוגלים לתמוך ('מניעתית') ולקדם במהלך ימים ושנים בריאות/חוסן, תפקוד, שמחת חיים, התפתחות אישית/משפחתית/קהילתית ואיכות חיים באופן כללי, תוך חתירה ליחסי גומלין איכותיים, מנעימים ופוריים -- ככל האפשר בתנאים נתונים -- של הפרט, עם סביבותיו החברתיות (משפחה, קהילה) והאקולוגיות. כמו כן, הדרכה בעזרה עצמית (עצמאית) והדדית מירבית, זהירה (במקביל לסיוע מקצועי מהימן, ככל הנדרש) ויעילה במצבי חולי שכיחים, חריפים וכרוניים.
+          </p>
+        </div>
+
+        <p><strong>השרות מיועד: <u>ליחידים</u></strong></p>
+        <ul>
+          <li>
+            בנוסף לתהליכי אימון והשבחת בריאות ואיכות חיים, כמתואר לעיל, גם - לפי הצורך: על בסיס של הערכת מצב אבחנתית ותפקודית מערכתית יסודית, תוצע תוכנית תמיכה טיפולית רב-תחומית, כולל בראיה קונוונציונאלית (שילובי אלמנטים של תזונה רפואית, צמחי מרפא, רפואה סינית, הומאופתיה קלסית, רפואה פיזיקלית כהידרותרפיה וכו', התעמלות רפואית, רפואה ידנית, פסיכותרפיה ועוד). זאת תוך נסיון למזער את המעורבות והפולשנות הטיפולית (גם כשמדובר ב'רפואה משלימה') ולהעצים ולהמשיך לשדרג את יכולת העזרה העצמית (תוך הדדיות ככל המתבקש) של מבקש השירות. לפי נתוני המקרה, התהליך יתנהל בתאום עם רופא המשפחה ומקצועני בריאות רלוונטיים אחרים.
+          </li>
+          <li>
+            כל זאת, במהלך מספר פגישות וצפי לתוצאות חיוביות תוך זמן יחסית מוגדר -- שיקבעו לפי סוגי הבעיות.
+          </li>
+          <li>
+            למתגוררים הרחק מראש פנה, מומלצת מתכונת בה -- לצורך העניין -- יתארח המטופל בראש פינה או סביבתה מספר ימים, שבמהלכם אפשרי תהליך לימודי וטיפולי מרוכז יותר, עם המשך קשר ומעקב טלפוני ואינטרנטי.
+          </li>
+          <li>
+            תמחור צנוע ומתחשב.
+          </li>
+        </ul>
+
+        <div style="margin-top: 1.25rem; display: flex; gap: 0.85rem; flex-wrap: wrap;">
+          <a href="#contact" class="btn btn-primary">ליצירת קשר וקביעת ייעוץ</a>
+          <button type="button" class="panel-close-btn" data-close-panel>סגור מקטע ↑</button>
+        </div>
+      </div>
+
+      <!-- פאנל נפתח 2: לקבוצות -->
+      <div class="service-full-panel" id="panel-groups">
+        <div class="panel-header">
+          <h3>לקבוצות (פירוט מלא)</h3>
+          <button type="button" class="panel-close-btn" data-close-panel>✕ סגור מקטע</button>
+        </div>
+
+        <div class="systemic-intro-box">
+          <p><strong>שרותי רפואה (קונוונציונאלית/כללית ונטורופתית) והדרכת בריאות מערכתיים (הוליסטיים) לשימור, החלמה, והשבחה מתמשכת של תשתיות ומנגנוני בריאות ואיכות חיים במהלך ימים ושנים</strong></p>
+          <p>
+            תשתיות ומנגנוני בריאות הפרט (גוף-נפש-סביבה) -- משמע: גורמים ושיקולים המזוהים בדרך כלל, דידקטית, כ<strong>גופניים</strong> (כנשימה, תזונה, עיכול, הפרשות, פעילות עצבית, זרימת דם, חיסון, יציבה, תנועתיות וכו'), <strong>נפשיים</strong> (גישה ערכית/מצפונית מודעות, רצון, משמעת ושליטה עצמית, ביטוי רגשות, ניהול וניתוב מתחים -- כולל ניהול סדרי עדיפויות וזמן, תקשורת בין-אישית, למידה ויצירתיות וכו') <strong>ומיקרו-אקולוגיים</strong> (בסביבתו המיידית של האדם - כסוג ביגוד, רהוט, ריכוזי כימיקלים או קרינה, איכות התאורה, אקוסטיקה ואסטטיקה, בעלי חיים, צמחיה וכו'). ברור מאוד כיום ששלושת מימדים אלה מקושרים ושלובים מערכתית, בכל תחומי ורבדי הבריאות והרפואה האישית והציבורית.
+          </p>
+          <p style="margin-bottom: 0;">
+            כחלק מהתייחסות טיפולית/רפואית למצב חולני נתון, או כמשימה בפני עצמה -- מושם דגש מרכזי על הקנייה מדורגת וגמישה של מידע, כלים, שיטות ומיומנויות באורחות חיים (התנהגויות בריאותיות) המסוגלים לתמוך ('מניעתית') ולקדם במהלך ימים ושנים בריאות/חוסן, תפקוד, שמחת חיים, התפתחות אישית/משפחתית/קהילתית ואיכות חיים באופן כללי, תוך חתירה ליחסי גומלין איכותיים, מנעימים ופוריים -- ככל האפשר בתנאים נתונים -- של הפרט, עם סביבותיו החברתיות (משפחה, קהילה) והאקולוגיות. כמו כן, הדרכה בעזרה עצמית (עצמאית) והדדית מירבית, זהירה (במקביל לסיוע מקצועי מהימן, ככל הנדרש) ויעילה במצבי חולי שכיחים, חריפים וכרוניים.
+          </p>
+        </div>
+
+        <p><strong>השרות מיועד: <u>לקבוצות</u></strong></p>
+        <ul>
+          <li>משפחות, וקבוצות קטנות עד כ-25 איש - סדנאות: מידע תאורטי והתנסותי.</li>
+          <li>קבוצות גדולות יותר - בנוסף למידע תאורטי (הרצאה), ניתן, בכפוף למספר המשתתפים ולאילוצי זמן, לחוות ולתרגל בצורה פחות או יותר מפורטת ומעמיקה מרכיבים בסיסיים של בריאות מערכתית, כגון: נשימה נכונה, יציבה, התמתחות, פעילות גופנית והרפיה נאותים, עיסוי עצמי, הדמייה יצירתית, שליטה ומשמעת עצמית גמישה ובונה, ותקשורת חיובית ומיטיבה.</li>
+          <li>בנוסף למידע, ומיומנויות כלליים בבריאות/רפואה מערכתית ניתן יהיה למקד את הדיון לפי צורך או עניין משותף לקהל המשתתפים -- כהפרעות ומחלות ספציפיות, התייחסות לקבוצות גיל שונות, שיטות תחזוקה וטיפול עצמי מסויימות, וכדומה.</li>
+          <li><strong>מתכונת:</strong> פגישה חד-פעמית (משעה עד 3 שעות) או מספר פגישות במהלך יום, מספר ימים רצופים, או לאורך זמן (כחוג/קורס למידה והתנסות).</li>
+          <li><strong>העלות</strong> תיקבע לפי משך התהליך, מספר משתתפים ושיקולים נוספים.</li>
+        </ul>
+        <div style="margin-top: 1.25rem; display: flex; gap: 0.85rem; flex-wrap: wrap;">
+          <a href="#lectures" class="btn btn-primary">לפירוט ההרצאות והסדנאות</a>
+          <button type="button" class="panel-close-btn" data-close-panel>סגור מקטע ↑</button>
+        </div>
+      </div>
+
+      <!-- פאנל נפתח 3: לארגונים וגופים אחרים -->
+      <div class="service-full-panel" id="panel-organizations">
+        <div class="panel-header">
+          <h3>לאירגונים וגופים אחרים (בתי עסק/מפעלים, בתי ספר, רשויות מוניציפליות ועוד) — פירוט מלא</h3>
+          <button type="button" class="panel-close-btn" data-close-panel>✕ סגור מקטע</button>
+        </div>
+
+        <div class="systemic-intro-box">
+          <p><strong>שרותי רפואה (קונוונציונאלית/כללית ונטורופתית) והדרכת בריאות מערכתיים (הוליסטיים) לשימור, החלמה, והשבחה מתמשכת של תשתיות ומנגנוני בריאות ואיכות חיים במהלך ימים ושנים</strong></p>
+          <p>
+            תשתיות ומנגנוני בריאות הפרט (גוף-נפש-סביבה) -- משמע: גורמים ושיקולים המזוהים בדרך כלל, דידקטית, כ<strong>גופניים</strong> (כנשימה, תזונה, עיכול, הפרשות, פעילות עצבית, זרימת דם, חיסון, יציבה, תנועתיות וכו'), <strong>נפשיים</strong> (גישה ערכית/מצפונית מודעות, רצון, משמעת ושליטה עצמית, ביטוי רגשות, ניהול וניתוב מתחים -- כולל ניהול סדרי עדיפויות וזמן, תקשורת בין-אישית, למידה ויצירתיות וכו') <strong>ומיקרו-אקולוגיים</strong> (בסביבתו המיידית של האדם - כסוג ביגוד, רהוט, ריכוזי כימיקלים או קרינה, איכות התאורה, אקוסטיקה ואסטטיקה, בעלי חיים, צמחיה וכו'). ברור מאוד כיום ששלושת מימדים אלה מקושרים ושלובים מערכתית, בכל תחומי ורבדי הבריאות והרפואה האישית והציבורית.
+          </p>
+          <p style="margin-bottom: 0;">
+            כחלק מהתייחסות טיפולית/רפואית למצב חולני נתון, או כמשימה בפני עצמה -- מושם דגש מרכזי על הקנייה מדורגת וגמישה של מידע, כלים, שיטות ומיומנויות באורחות חיים (התנהגויות בריאותיות) המסוגלים לתמוך ('מניעתית') ולקדם במהלך ימים ושנים בריאות/חוסן, תפקוד, שמחת חיים, התפתחות אישית/משפחתית/קהילתית ואיכות חיים באופן כללי, תוך חתירה ליחסי גומלין איכותיים, מנעימים ופוריים -- ככל האפשר בתנאים נתונים -- של הפרט, עם סביבותיו החברתיות (משפחה, קהילה) והאקולוגיות. כמו כן, הדרכה בעזרה עצמית (עצמאית) והדדית מירבית, זהירה (במקביל לסיוע מקצועי מהימן, ככל הנדרש) ויעילה במצבי חולי שכיחים, חריפים וכרוניים.
+          </p>
+        </div>
+
+        <p><strong>לאירגונים וגופים אחרים (בתי עסק/מפעלים, בתי ספר, רשויות מוניציפליות ועוד).</strong></p>
+        <p>
+          מוצעות תוכניות קידום בריאות מערכתיות המתייחסות באופן מודולרי ומשולב לאורחות חיים, ליחסי גומלין בקהילה, לשיקולים אקולוגיים (כולל בטיחותיים), לשירותי בריאות רלוונטיים ולמדיניות פעילה של האירגון/גוף ביחס לתחום הפורמאלי של קידום בריאות. רכיב מרכזי הינו הכשרת נאמני בריאות, בפורמאטים המותאמים לצרכים ואילוצים שונים.
+        </p>
+
+        <div style="margin-top: 1.25rem; display: flex; gap: 0.85rem; flex-wrap: wrap;">
+          <a href="#workshop-6" class="btn btn-primary">לפירוט תוכנית הכשרת נאמני בריאות</a>
+          <button type="button" class="panel-close-btn" data-close-panel>סגור מקטע ↑</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- מקטע אודות (כולל תמונתו של ד"ר שמואל רנדור) -->
+  <section id="about" class="alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>אודות</h2>
+      </div>
+
+      <div class="about-card">
+        <div class="about-header-grid">
+          <div class="doctor-portrait-frame">
+            <img
+              src="400_5fc8bbcd80c49.webp"
+              alt="ד&quot;ר שמואל רנדור (M.D., N.D)"
+            />
+            <div class="doctor-portrait-caption">ד"ר שמואל רנדור</div>
+          </div>
+
+          <div class="about-top">
+            <h3>ד"ר שמואל רנדור (M.D., N.D) | Dr. Samuel Randor</h3>
+            <div class="about-subtitle">
+              -- רפואה הוליסטית - קונוונציונלית (כללית) ומשלימה (נטורופתית)<br>
+              -- הדרכת בריאות (רפואת אורחות חיים)
+            </div>
+            <span class="cv-badge">תקציר קורות חיים 2021 &bull; פרטים נוספים זמינים למעוניינים.</span>
+          </div>
+        </div>
+
+        <p>
+          דוקטור לרפואה קונוונציונלית-כללית (M.D. -- ביה"ס לרפואה ע"ש סקלר, ת"א, 1976) ודוקטור לרפואה נטורופתית (John Bastyr College -- N.D., סיאטל, ארה"ב, 1988) בהכשרתו.
+        </p>
+        <p style="margin-top: 0.85rem;">
+          ציר מרכזי בפעילותו המקצועית הינו הדרכת בריאות (רפואת אורחות חיים), רפואה מונעת, טיפולית/משקמת וכן, מקדמת ומשביחת בריאות ואיכות חיים (מעֵבֵר לחסר של תסמינים או ממצאים חולניים) במהלך ימים ושנים, כולל בגילאים מבוגרים מאוד.
+        </p>
+        <p style="margin-top: 0.85rem;">
+          פעל במסגרות אקדמיות וכן בפעילות מדעית/מחקרית בתחומים שונים ביניהם מחלת האפילפסיה, שיקום, שימושים ורעילות של חומרים טבעיים, ביו-רפואה תיאורטית ועוד (רשימת פרסומים – להלן).
+        </p>
+
+        <h4>בין המוסדות והאירגונים בהם הועסק:</h4>
+        <ul class="styled-list">
+          <li><strong>אוניברסיטת ווטרלו</strong> בווטרלו-קיצ'נר, אונטריו, קנדה (כיועץ/איש-משאב אקדמי במחלקה ללימודים רב-תחומיים).</li>
+          <li><strong>בית החולים לילדים (The sick children hospital)</strong> בטורונטו, אונטריו, קנדה (כיועץ קליני לשימושי ורעילות חומרים טבעיים במחלקה לפרמקולוגיה וטוקסיקולוגיה).</li>
+          <li><strong>הקולג' לרפואה נטורופתית</strong>, בטורונטו – כנ"ל (כמרצה לפתולוגיה ולאבחנה מבדלת).</li>
+          <li><strong>בית החולים אסף הרופא</strong> (במרפאת שירותי רפואה משלימה, כמתאם מחקר, בקרת איכות קלינית והסברה קהילתית).</li>
+          <li><strong>בתי הספר לסיעוד בצפת ובחיפה</strong> (הנחית קורסים בנושאי רפואה משלימה ואורחות חיים).</li>
+          <li><strong>המכללה האקדמית תל חי, מכללת רידמן ומכללות נוספות</strong> (מרצה למדעים בלימודי רפואה משלימה, תוך דגש על נושאי אורחות החיים כמרכזיים לפיזיולוגיה, פתולוגיה והתייחסות קלינית לכל מטופל).</li>
+          <li><strong>מכון 'משאבים'</strong> (לפיתוח משאבי התמודדות, מיסודו של פרופ' מולי להד, מסונף למכללה האקדמית תל חי) בקרית שמונה (כמטפל רב-תחומי בפוסט-טראומה וכמרצה/מנחה לכוחות ההצלה ולגופי חירום אחרים ברחבי הארץ בניהול מתחים יעיל ברמה האישית/משפחתית/קהילתית במצבי לחץ מובהקים; הכין ערכת הדרכה לשימור וקידום בריאות באמצעות אורחות חיים נאותים, המיועד לכוחות ההצלה בישראל (משטרה, מכבי אש, מד"א וזק"א); והדריך צוותים נבחרים כסוכני שינוי לקידום בריאות בסביבותיהם המקצועיות; כמו-כן, פיתח תוכנית להכשרת מדריכי בריאות מוסמכים, מטעם 'משאבים' ובחסות המכללה האקדמית תל-חי, עם יישום ראשון בקרב קהילת יוצאי אתיופיה, בשיתוף עם עמותת 'טנא בריאות' בחדרה).</li>
+          <li><strong>עמותת 'הלבב' בצפת</strong> (כמקדם בריאות קהילתי, בין היתר בשיתוף עם עירית צפת ועמותת 'אנוש').</li>
+          <li><strong>אוניברסיטת בן גוריון</strong> (מרצה אורח; סדנאות השתלמות רופאי משפחה של קופ"ח כללית, מחוז צפון, ברפואת אורחות חיים).</li>
+          <li><strong>אוניבסיטת בר אילן</strong> (מרצה אורח; הכשרת מטפלים באוטיזם כנאמני – סוכני שינוי -- אורחות חיים נאותים במרכז 'מיפנה' בראש פינה; סדנת ניהול מתחים לסטודנטים בבית הספר לרפואה בצפת).</li>
+          <li><strong>הסוכנות היהודית</strong> (הכשרת צוותים במרכזי קליטה כנאמני אורחות חיים מקדמי בריאות ואיכות חיים).</li>
+          <li><strong>קופת חולים 'כללית-משלימה'</strong> בטבריה, קריית שמונה, טבריה ועוד (כרופא מאבחן).</li>
+        </ul>
+
+        <h4>כמו-כן:</h4>
+        <ul class="styled-list">
+          <li>הנחה מאות הרצאות, סדנאות וחוגים לקהלים מגוונים במרכזים קהילתיים, בתי-ספר, מקומות עבודה, בתי אבות ומועדני ותיקים, קיבוצים, קבוצות וארגונים פרטיים שונים – בנושאי בריאות הוליסטית ואורחות חיים כגורמי סיכון או סיכוי.</li>
+          <li>השתתף בתכנון ארוך טווח להקמת חוג בקידום בריאות לתואר ראשון במסגרת המכללה האקדמית תל חי.</li>
+          <li>השתתף בתכנון הקמת מכון למחקר וליישומים קליניים של אורחות חיים תומכי ומקדמי בריאות באגף המחקר בבית החולים זיו, צפת.</li>
+          <li>במהלך השנים, במקביל לכל היתר, מפעיל קליניקה פרטית ברפואה (קונוונציונאלית-כללית ונטורופתית) והדרכת בריאות הוליסטיים (מערכתיים), פרטנית ומשפחתית.</li>
+        </ul>
+
+        <details class="publications-box" open>
+          <summary>פרסומים מדעיים (Publications &amp; Abstracts)</summary>
+          <ol class="pub-list">
+            <li>Randor S. Simultaneous EEG-intracellular recording in experimental epilepsy in cats. M.D. thesis, Tel-Aviv Medical School, 1979.</li>
+            <li>Koren, G., Randor S., Martin. S., Daneman, D. Maternal ginseng use associated with neonatal androgenization. <em>JAMA</em> 264:2866, 1990. Comment in <em>JAMA</em> 265:1828, 1991.</li>
+            <li>Randor S., Colanecchia T., Tirona, R.G., Gladstone, D., Kindack, G.G, and Koren, G. Reproductive risks of common medicinal plants. In Koren G. (Ed.), <em>Fetal-Material Toxicity</em>. Marcel Dekker Inc., New-York, New-York, 2nd. Edition. 1992. pp. 447-514.</li>
+            <li>Shear NH, Malkiewicz IM, Klein D, Koren G, Randor S, Neuman MG. Acetaminophen-induced toxicity to human epidermoid cell line A431 and hepatoblastoma cell line Hep G2, in vitro, is diminished by silymarin. <em>Skin Pharmacol.</em> 1995;8(6):279-91</li>
+            <li>Randor, S. Systems approach to the healing/ailing continuum. Unpublished manuscript, 1984. (An updated version is in preparation for publication).</li>
+            <li>Randor S. Epileptolytic neuro-behavioral and other non-pharmacological therapies. In preparation for publication</li>
+          </ol>
+
+          <div class="pub-subhead">Abstracts / Presentations:</div>
+          <ol class="pub-list">
+            <li>Neuman, M., Koren, G., Randor, S., Yang, S., Roberts, E.A. Protective effects of silymarin on hepatocellular toxicity of acetaminophen in human cell lines in vitro. Presented at the Combined meeting of the Royal College of Physicians and Surgeons of Canada and the Canadian Society for clinical Investigation, August, 1991. Published in <em>Can. Clin. Invest. Med.</em> 40A (Suppl. 4) Abst. 112, p. 86, 1991.</li>
+            <li>Randor, S. General and reproductive aspects of natural substances in modern medicine: an overview. Presented at the American Association of Clinical Toxicology, Satellite Workshop: How to Evaluate Reproduction Risk. Toronto, Oct. 1991.</li>
+          </ol>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- מקטע הרצאות סדנאות וקורסים -->
+  <section id="lectures">
+    <div class="container">
+      <div class="section-header">
+        <h2>הרצאות סדנאות וקורסים</h2>
+      </div>
+
+      <div class="lectures-banner-strip">
+        <img
+          src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
+          alt="הרצאות, סדנאות וקורסים בחינוך לבריאות"
+          loading="lazy"
+        />
+        <div>
+          <h3 style="font-family: 'Heebo', sans-serif; color: var(--primary-dark); margin-bottom: 0.5rem;">
+            הקניית ידע מדעי וכלים התנסותיים מעשיים לציבור הרחב ולאנשי מקצוע
+          </h3>
+          <p>
+            מאות הרצאות, סדנאות וקורסים מובנים בתחומי הבריאות ההוליסטית, רפואת אורחות חיים, ניהול מתחים ועקה, מניעת הזדקנות והכשרת נאמני בריאות וסוכני שינוי — במתכונות גמישות המותאמות לקהלי יעד מגוונים ולגמול השתלמות.
+          </p>
+        </div>
+      </div>
+
+      <div class="lectures-toc" id="lectures-index">
+        <h3>תוכן העניינים — רשימת ההרצאות, הסדנאות והקורסים (לחץ למעבר לתקציר המלא):</h3>
+        <div class="toc-grid">
+          <a href="#workshop-1" class="toc-link">1) בריאות הוליסטית ורפואת אורחות חיים: 'להוסיף שנים לחיים וחיים לשנים'</a>
+          <a href="#workshop-2" class="toc-link" dir="ltr" style="text-align: left;">2) Your health is in your 'head', 'heart', 'hands' and 'space'</a>
+          <a href="#workshop-3" class="toc-link">3) מניעה והפיכות של תהליכי הזדקנות גופנית ונפשית</a>
+          <a href="#workshop-4" class="toc-link">4) נהל את מתחיך במקום שהם ינהלו אותך (לציבור הרחב)</a>
+          <a href="#workshop-5" class="toc-link">5) ניהול שיטתי, יעיל ויצירתי של מצבי לחץ, מתח ועקה (לאנשי מקצוע)</a>
+          <a href="#workshop-6" class="toc-link">6) הכשרת נאמני בריאות</a>
+          <a href="#workshop-7" class="toc-link">7) מורים והורים כסוכני שינוי בהקשר להפרעות קשב, ריכוז והתנהגות</a>
+          <a href="#workshop-8" class="toc-link">8) 'קידום בריאות' — קורס/סדנה</a>
+          <a href="#workshop-9" class="toc-link">9) שונות (משקל תקין, תקשורת, מגע טיפולי, טאי-צ'י, מחלות עונתיות, הילינג)</a>
+        </div>
+      </div>
+
+      <!-- 1 -->
+      <article class="syllabus-card" id="workshop-1">
+        <h3>1) בריאות הוליסטית ורפואת אורחות חיים: 'להוסיף שנים לחיים וחיים לשנים'</h3>
+        <div class="syllabus-sub">
+          אורחות חיים כגורמי סיכון או סיכוי לקידום בריאות ואיכות חיים אישית ובהיבטים משפחתיים וקהילתיים<br>
+          הרצאת/סדנת מבוא וקורס/חוג (תקציר מפורט)
+        </div>
+        <p>
+          במתכונות שונות, מיועד לקהל הרחב, לסטודנטים במקצועות הבריאות, רווחה וחינוך (כחלק מתוכנית הלימודים) ולעוסקים בתחומים אלה (כהעשרה והשתלמות, כולל לגמול השתלמות למורים, אחיות/אחים, עו"ס, פסיכולוגים וכו'):
+        </p>
+        <p>
+          סקירה כללית, ממעוף הציפור, על בריאות/רפואה הוליסטית (מערכתית, משולבת) מודרנית, מבוססת-ראיות-מדעיות והשלכותיה בכל מצב בריאותי ובכל גיל. כמו כן, התנסות 'על קצה המזלג' וככל שיאפשר הזמן בתחומים מסוימים: נשימה, יציבה ותנועתיות, השפעות הדמיה, ועסוי עצמי והדדי.
+        </p>
+        <p>
+          'בריאות הוליסטית' נתפסת כאיזון דינמי בכל אדם בהיותו מכלול משולב: יחידה עצמאית רבת תחומים ורבדים נפשית וגופנית, במסגרת ותוך יחסי גומלין עם מערכות חברתיות ואקולוגיות אליהן הוא משתייך.
+        </p>
+        <p>
+          אורחות חיים: מכלול האופנים בהם אדם בוחר להתנהל ולנהל את חייו מבחינה נפשית (שכלית, רגשית, אינטואיטיבית) גופנית (על מכלול תתי המערכות) ומיקרו-סביבתית (חברתיות ואקולוגיות); הרגלי התנהגות פנימית/ סובייקטיבית וחיצונית/אובייקטיבית.
+        </p>
+        <p>
+          ציר מרכזי הינו הקשר בין אורחות חיים נכונים דיים, לבין שימור, שיקום ואף קידום מצטבר של בריאות האדם, תפקודו ואיכות חייו במהלך ימים ושנים. זאת, באופן מיוחד בנוגע לחוסן ואופני התמודדות במצבי לחץ, מועקה ואי-ודאות חריפים או ממושכים, וכן בהקשרים של התפתחות והשבחה אישית והדדית (משפחתית וקהילתית).
+        </p>
+        <p>
+          אורחות חיים נאותים דיים ושילוביהם המושכלים, מסוגלים לגרום או לפחות לתרום לא רק למניעה או להאטה של מחלות כרוניות ניווניות רבות, אלא גם להפיכותן: יש מידע רב, מגוון ומעורר תקווה גם בנוגע לגרועות ולמסוכנות שבהן (הן עלולות כמובן לצוץ שוב כתהליכי תורפה פוטנציאליים, כאשר תנאים משתנים לרעה), כולל באשר להשפעת אורחות חיים על התבטאות נטיות גנטיות וכן בנוגע לגמישותו הפוטנציאלית של ה'אופי'.
+        </p>
+        <p>
+          אכן כן: הזיקנה -- בהגדרתה כפונקציה מורכבת של תשלובת הפרעות תפקודיות ברקמות, אברים ופעילויות נפשיות בכל רגע נתון -- הינה תהליך בר מניעה והפיך יחסית, ברמה העקרונית אך גם המעשית מאוד. ניתן לבוא בימים, ולהתבגר כרונולוגית גם בגילאים מופלגים-- בלי להזקן (במובן החולני של המילה) באופן גורף, מתמשך ומחמיר. העור אולי יתקמט (הצטברות נזקי שמש, שפע דאגות-יתר ואולי סיגריות) אך המוח ויתר הרקמות והתפקודים -- אפשרי מאוד ששישארו או אף ישובו להיות צעירים בהחלט, בהתחשב גם בעליות ומורדות סבירים אשר קורים בכל גיל . העלומים היא פונקציה מורכבת ודינאמית.....
+        </p>
+        <p>
+          כל זאת בהקשר לאורחות חיים – ובנוסף, פלאי הטכנולוגיה הביו-רפואית: תאי גזע, הנדסה גנטית, ביו-הנדסה תרופות מעולות, השתלות ועוד; אך אלה למעשה מהווים ויהוו את הרפואה המשלימה המודרנית! 'רפואת אורחות חיים' -- רפואת תשתיות הבריאות -- הינה להלכה ולמעשה הליבה, המכנה משותף וציר מרכזי לכל הגישות והאסכולות בשדה הבריאות, כולל בקצב גובר ברפואה ה'קונוונציונאלית' בכ- 20-30 השנים האחרונות.
+        </p>
+        <p>
+          תתי נושאים בשדה אורחות החיים: דפוסי חשיבה, רגש, התנהגות ותקשורת וכן, ניהול מתחים/רוגע ויצירתיות; נשימה; תזונה\נוזלים; תנועתיות (יציבה, שינויי תנוחה, תזוזה שגרתית, התמתחויות יומיומיות, הרפייה שרירית, קואורדינציה ועוד) ופעילות גופנית (אירובית ואנאירובית); סביבתיות מיקרו- ומקרו-אקולוגית; שונות -- שינה, איזון בין עבודה, מנוחה, נופש/בילוי/בידור/משחק (כולל פעילות גופנית בשעות הפנאי) ופעילות יצירתית, מיניות, הרגלי צריכת חומרים, למידה והשתלמות בדרכים לעזרה עצמית (והדדית) באשר להפרעות/מחלות נפוצות ועוד.
+        </p>
+        <p>
+          אורחות חיים, כגורמי סיכון או סיכוי, כפונקציה של: פתיחות ומודעות; רצון וכוח רצון; לימוד/התעדכנות/השתלמות בהתנהלות בריאה, כולל בטיפוח של מודעות גוברת ומשמעת/שליטה עצמית איתנה-גם-גמישה, בזמן אמת; יישום וביצוע – (כולל התאוששות מכישלון ביצועי, ומינופו להמשך מוצלח יותר) – יום ביומו, רגע ברגעו (ורצוי – רגע ברוגעו!); זאת ניתן לפתח ולטפח.
+        </p>
+        <p>
+          לסיכום, יושם דגש על הצורך באחריות, התנהלות ועזרה עצמיים נאותים ככל הניתן (בכפוף לתנאים אובייקטיביים שונים), תוך תמיכה והדדיות משפחתית/קהילתית כמתבקש, והסתייעות לפי הצורך בעזרה מקצועית מתאימה, ועל האפשרויות לממשם היטב ע"י איסוף מידע מהימן וטיפוח כלים ויכולות יעילים – כל מקרה או תקופה, לגופם. תוצאת אימוץ גישה פעילה זאת: העצמת הסיכוי לשימור ולקידום גובר של בריאות במהלך ימים ושנים וכן לשיפור תוחלת ואיכות החיים.
+        </p>
+        <hr style="border: none; border-top: 1px dashed var(--border-color); margin: 1.25rem 0;">
+        <p>
+          בעקבות מפגש ההכרות/מבוא ניתן יהיה להרחיב ולפתח את הנושאים השונים שיועלו ע"י סדנה(אות) בת מספר מפגשים כמשאב וכמנוף להפיכת אורחות חיים המהווים גורמי סיכון לגורמי סיכוי לשיפור ולהעמקת משאבי בריאות תפקוד, ואיכות חיים באופן כללי (שמחת חיים, שמחת חיים במיוחד!!).
+        </p>
+        <p><strong>הסדנה כוללת:</strong></p>
+        <ul>
+          <li>מידע רב (כולל בכתב) והכשרה/תרגול התנסותיים ('ארגז כלים') מדוקדקים בתחומי אורחות החיים שפורטו לעיל.</li>
+        </ul>
+        <p><strong>בנוסף -- התייחסות רב תחומית:</strong></p>
+        <ul>
+          <li>לעקרונות, גורמים ושיטות המשפיעים בתהליכי שינוי ועיצוב התנהגויות בריאותיות ברמה האישית, משפחתית וקהילייתית.</li>
+          <li>לעזרה עצמית והדדית מיומנת וזהירה בבעיות בריאותיות נפוצות ע"י אלמנטים של מגוון שיטות טיפוליות: רפואה תזונתית/ביוכימית, צמחי מרפא, הומאופתיה, רפואה סינית, רפואה פיזיקלית (הידרותרפיה, השפעות חום וקור ועוד), טיפולים ידניים ויציבתיים/תנועתיים (שיטות אלכסנדר, פלדנקרייז, יוגה, טאי-צ'י ועוד) ופסיכולוגיה מערכתית/הוליסטית (חשיבה מאוזנת אופרטיבית, הדמיות/דמיון מכוון, התמרכזות ועוד). כל זאת, תוך הדגשת הצורך בשיתוף פעולה מושכל עם שירותי בריאות מקצועיים איכותיים ככל שמתבקש.</li>
+        </ul>
+        <p>
+          ניתן יהיה להתמקד יותר מראש ולארגן סדנה(ות) לפי צרכים בריאותיים מוגדרים כגון גילאים מבוגרים או צעירים, ניהול משקל, ניהול מתחים, מחלות מסוימות, הקשרים תעסוקתיים וכו'.<br>
+          ניתן יהיה להתאים את מספר ומשך המפגשים בסדנה לפי צרכים ואילוצים שונים. מומלץ 10-12 מפגשים, שעתיים כ"א.<br>
+          <strong>מספר משתתפים: עד 20.</strong>
+        </p>
+        <div class="back-top-row">
+          <a href="#lectures-index" class="back-top-link">↑ חזרה לרשימת ההרצאות והסדנאות</a>
+        </div>
+      </article>
+
+      <!-- 2 (English) -->
+      <article class="syllabus-card en-card" id="workshop-2">
+        <h3>2) Your health is in your 'head', 'heart', 'hands' and 'space':</h3>
+        <div class="syllabus-sub">
+          Health and wellness potential maintenance, recovery and life-long promotion via appropriate-enough life styles<br>
+          Introductory lecture/workshop and a series/course
+        </div>
+        <p><strong>Introductory meeting</strong></p>
+        <p>A 2 h. lecture and some experiential learning -- including:</p>
+        <ul>
+          <li>
+            An overview of the amply (scientifically) validated decisive relevance of appropriate individual and mutual subjective and overt health-behaviors -- also known as life-styles (pertaining to self-responsibility and choices people make at any given moment) to current and future fitness and well being of people and communities – large (such as municipalities) and small (any two or more people with a shared interest, activities or purpose such as families, naturally).
+          </li>
+          <li>
+            Health-wellness sustaining and enhancing life-styles unfold in psychological/psychosocial, physiological and (micro/macro)-ecological inter-related dimensions – dynamically integrated spirit-mind-body-environment in one word actually, holistically speaking.<br>
+            This relates to strength/robustness, resilience/endurance, flexibility, balance, coordination, speed, etc -- physically and spiritually/mentally/emotionally (particularly the relative prevalence of love, joy, peace of mind – much reflecting the efficiency of stress- management and aspirations-management skills, including sorting out genuine needs from spurious/wantom 'wants', learning 'to couple discipline with delight', cultivating a 'compassionate – win-win – intentionality', along with thankfulness for opportunities to contend with one's emotions in a good way when the going is rough and a general broad and interwoven perspective of opposite and seemingly contradictory sides/angles in any situation etc).<br>
+            Consequently, life styles largely determine health, functionality and resourcefulness (especially under stress, whether derived from essentially unpleasant or pleasant circumstances), creativity, and quality of life in general.<br>
+            There will be emphasis on the need for, and feasibility of, informed, competent and progressive self-management/care (contingent upon age, functional state etc). In parallel, this approach calls for essential elements of pertinent and heart-felt mutual support, care and empowerment within relationships and other communities, as well as for qualified and, desirably, holistically-oriented professional assistance (for example, there are such surgeons), when genuinely needed.
+          </li>
+          <li>An outline of specific fundamental life-style issues – with selected cardinal details.</li>
+          <li>Experiential learning: correct breathing and some of its application, elements of proper postures and movement (functional movement patterns, routine stretching and muscular relaxation), useful imagery exercises and more -- time permitting.</li>
+        </ul>
+
+        <p><strong>Workshop series:</strong></p>
+        <p>10-12 meetings, 2 hours each are recommended (other formats are feasible, with consequent varying extent and depth of learning and training).</p>
+        <p>Elaboration on issues that were outlined during the introductory meeting and systematically delving into:</p>
+        <ul>
+          <li>Psychological and physiological mechanisms and processes underlying resiliency and progressive health and wellness.</li>
+          <li>Cognitive, emotional, behavioral and communication constructs and processes in regards to health/wellness and self-management, with emphasis on stress management and self fulfillment; particular attention to imagery as a powerful tool.</li>
+          <li>Correct breathing and its psycho-physiological applications.</li>
+          <li>Reasonable fluid and nutritional consumption.</li>
+          <li>Satisfactory physical activity: aerobic and un-aerobic, posture, functional motion, stretching, muscle relaxation (including elements of self and mutual massage), balance, etc.</li>
+          <li>Micro-ecological, ergonometric and safety issues.</li>
+          <li>Miscellanea and multi-domain topics: sleep, sexuality, weight management, substance abuse and self/mutual-care in common ailments. <strong>Number of participants: up to 20.</strong></li>
+        </ul>
+        <div class="back-top-row">
+          <a href="#lectures-index" class="back-top-link">↑ חזרה לרשימת ההרצאות והסדנאות</a>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="syllabus-card" id="workshop-3">
+        <h3>3) מניעה והפיכות של תהליכי הזדקנות גופנית ונפשית</h3>
+        <div class="syllabus-sub">
+          אורחות חיים כגורמי-סיכוי לאריכות ימים תוך בריאות ואיכות חיים טובים דיים רוב הזמן או אף טובים מאוד.<br>
+          (הזדקנות היא לא עניין של גיל כשלעצמו!!) &bull; מפגש מבוא וסדנה/קורס
+        </div>
+        <p><strong>תקציר כללי:</strong></p>
+        <p>
+          סקירה כללית על בריאות/רפואה הוליסטית (מערכתית) מודרנית והשלכותיה בגילאים מתקדמים. ציר מרכזי הינו הקשר בין אורחות חיים נאותים דיים -- נפשית, גופנית וסביבתית – לבין שימור, שיקום וקידום בריאות ואיכות חיים במהלך השנים; יושם דגש על הצורך באחריות, התנהלות ועזרה עצמיים, ככל הניתן (תוך הדדיות מתבקשת והסתייעות בעזרה מקצועית מהימנה, לפי הצורך) באופן כללי, ועל האפשרויות לממש זאת ע"י איסוף מידע אמין וטיפוח כלים ויכולות ספציפיים יעילים – כל מקרה או תקופה, לגופם. עקב כך יכולה לגבור מאוד ההסתברות ל'הוספת שנים לחיים, וחיים לשנים'.
+        </p>
+        <p><strong>תקציר מפורט:</strong></p>
+        <p>
+          עובדה מדעית מובהקת היא, שהאופנים בהם אדם בוחר להתנהל ולנהל את חייו – נפשית, גופנית וסביבתית -- ('אורחות חיים'), משפיעים במידה רבה ואפילו מכרעת על בריאותו הגופנית והנפשית (חוסן, סיבולת, גמישות, שיווי משקל קואורדינציה, זריזות ועוד), איכות חייו והתפתחותו האישית במהלך ימים ושנים.
+        </p>
+        <p>על כן, באופן עקרוני, באחריותו וביכולתו של כל אדם בוגר (בכפוף למגבלות תפקודיות ואילוצים אחרים):</p>
+        <ul>
+          <li>לתחזק ולשמר את תשתיות בריאותו ולנקוט ברפואה מונעת (כהתנהגות בטיחותית, בדיקות תקופתיות וכו').</li>
+          <li>ללמוד וליישם טיפול עצמי והדדי, יעיל וזהיר (במסגרת עזרה ומעקב מקצועיים לפי הצורך) – בבעיות נתונות (כולל במחלות כרוניות שכיחות אשר רבות מהן הוכחו כהפיכות על ידי שיפור אורחות חיים).</li>
+          <li>לקדם את חיוניותו ויכולותיו במהלך ימים ושנים (אכן כן: להתבגר בלי להזקין – ואף קיימת האפשרות להשתפר ולהשביח מבחינת תפקוד בסיסי, יצירתיות, תחושת משמעות, תועלת ושמחת חיים).</li>
+        </ul>
+        <p><strong>במילים אחרות:</strong></p>
+        <p>
+          קיימת טענה, שבעיקרון, אפשרי לכל אדם לחיות עד שיבה טובה, ולמות 'מיתת נשיקה', בריא (יחסית). למות בריא!? - זהו משפט מוזר, פרדוקסאלי לכאורה, אך שווה בדיקה מעמיקה. אכן, ההיסטוריה ומדע הגרונטולוגיה מספקים לנו דוגמאות לא מעטות של אנשים מאוששים מאוד בגילאים מופלגים (אף בני סביבות גיל 100 ויותר), הזוכים, חלקם, ל"מוות 'נאה', אלגנטי, ללא ייסורים קשים ועם תפקוד מכובד ופורה עד יומם האחרון - כל אחד בתחומו ולפי מידתו. וכפי שנאמר: "לא בשמיים היא..."
+        </p>
+        <p>
+          בריאות - גופנית ונפשית - אינה תלויה בגיל הכרונולוגי גרידא; היא מותנית, במידה מכרעת, בהחלטותינו ובבחירותינו, כולל בשיטות, בכלים ובחומרים בהם אנו משתמשים כדי למנוע מחלות, לתחזק את תשתיותינו הפיזיולוגיות / פסיכולוגיות / מיקרו-אקולוגיות, לטפל בבעיות ונזקים קיימים, ולקדם יותר ויותר חיוניות, תחושת משמעות ושמחת חיים. אין גיל מאוחר מדי כדי לאמץ בהדרגה ובזהירות הרגלים חדשים נאותים יותר ולטפל היטב - ולפחות להקל מאוד - בתהליכים חולניים, כולל כרוניים-ניווניים (אשר, כאמור, מדעי הרפואה ביססו מאוד את האפשרות שרבים מהם הפיכים באמצעות שינויים פשוטים יחסית באורחות חיים - כתזונה, פעילות גופנית וניהול מתחים. אף פעם (כמעט) לא מאוחר - אך כמובן, "יפה שעה אחת קודם".
+        </p>
+        <p>
+          חשוב להשתחרר ממיתוסים מסוכנים לבריאות הנפשית והגופנית , והמופרכים מבחינה מדעית כגון: ברבות השנים, ההידרדרות בחוסן ותפקוד הגופנפש הינה הנורמה...בלתי נמנעת ובלתי הפיכה...בלאי מצטבר...", או: "הכל בידי שמיים", יכול לסבור איש דתי, ( אך בהרהור נוסף וודאי יזכר ש"הכל בידי שמיים, חוץ מיראת שמיים" וש"הכל צפוי והרשות נתונה"), או: " הכול צפוי בגנים"... או: "זה האופי..אין מה לעשות" ו-"אי אפשר ללמד כלב זקן טריקים חדשים".
+        </p>
+        <p><strong>העובדות הן:</strong></p>
+        <ul>
+          <li>בלאי הינו אמנם תופעת טבע בלתי נמנעת, אך ניתן להאיטו ואף לנטרלו ע"י תחזוקה שוטפת ושדרוג מתמשך של תשתיות הבריאות ואיכות החיים – נפשית, גופנית וסביבתית. תהליך הזדקנות הינו שיבוש תפקודי גופני ו/או נפשי כפונקציה מורכבת מאוד ודינאמית של מכלול המערכות והמנגנונים בכל גיל.</li>
+          <li>זכותנו וביכולתנו להשתחרר מעריצותם של הרגלים שליליים בעליל (כולל הרגלים עתיקים וחזקים המסווגים כ'אופי').</li>
+          <li>ניתן ללמוד בהצלחה ולהרחיב אופקים בכל גיל .</li>
+          <li>ניתן לבוא בימים בלי להזקין -- גופנית ונפשית -- באופן משמעותי, ואף ל'הצעיר' אם חלו שיבושים (ותמיד קורים!) במהלך הדרך.</li>
+          <li>במידה מכרעת, התפתחויות אלה (הסה"כ הדינאמי של בריאות/חוסן ואיכות חיים) תלויות במודעותו, השקפותיו ובחירותיו בפועל של האדם. זאת, כולל אימוץ אורחות חיים (עמדות והתנהגויות בריאות) יום-יומיים תומכי ומקדמי בריאות העשויים להשפיע עמוקות גם על התבטאות המטען הגנטי ולסייע 'בהשבה – לא רק בעיכוב – של מחוגי הזמן' (מבחינת בלאי ונזקים עקב חוסר בשימור וטיפוח עצמיים מספיקים – נפשית גופנית וסביבתית -- במהלך השנים, כאמור לעיל). באופן פיוטי: זוהי דרך להתיימן ב 'ריקוד עם חץ הזמן, במעופו'. גם כש'נופלים' ואפילו 'מתרסקים', אפשר להתנער, לאסוף רסיסים, להיעזר כפי הצורך ולהתארגן להמשיך לפעול (כולל לדמום ולנוח היטב), ללמוד איך 'ליפול ולקום' טוב יותר ויותר, להתמנף הלוך ושוב ולהמשיך ליצור ולחולל עד תום.... ....עד סוף טוב דיו.</li>
+          <li>מדענים מהשורה הראשונה ברחבי העולם סבורים שכבר בימינו אפשרית -- תיאורטית ואף מעשית -- הארכה משמעותית מאוד של תוחלת החיים תוך בריאות/תפקוד תקינים דיים רוב הזמן – הן ע"י אורחות חיים נאותים והן ע"י פיתוחים טכנולוגיים טיפוליים (כשימוש בתאי גזע, הנדסה גנטית, ביו-הנדסה, תרופות מסוימות, השתלות ועוד. נתעלם בנקודה זו מהשלכות דמוגראפיות וכלכליות ('התפוצצות אוכלוסין' וכדו').</li>
+        </ul>
+        <p><strong>תחומי אורחות חיים (התנהגויות בריאותיות סובייקטיביות ואובייקטיביות):</strong></p>
+        <ul>
+          <li>דפוסי ותהליכי חשיבה, רגש, התנהגות ותקשורת יעילים ובונים; היבטים מנטאליים של ניהול מתחים\רוגע, שיפור הרגלים ומימוש עצמי; דגש מיוחד על הדמיה ויישומיה, ככלי בריאותי רב- עוצמה.</li>
+          <li>נשימה נכונה ויישומיה.</li>
+          <li>תזונה \ נוזלים נאותים.</li>
+          <li>פעילות גופנית (אירובית ואנאירובית) ותנועתיות (יציבה, תזוזה תפקודית יום יומית, התמתחויות, הרפיה שרירית -- כולל עקרונות ושיטות בסיסיים של עיסוי עצמי והדדי, שיווי משקל וקואורדינציה) שגרתיות נאותות.</li>
+          <li>שינה איכותית.</li>
+          <li>סביבה (מיקרו-אקולוגיה) בטיחותית ו'ידידותית' לבריאות.</li>
+          <li>שונות ונושאים רב תחומיים -- איזון בין עבודה, מנוחה, נופש/בילוי/בידור/משחק (כולל פעילות גופנית בשעות הפנאי) ופעילות יצירתית; מיניות; הרגלי צריכת חומרים; חשיבות הגיוון ברוב תחומי החיים; עזרה עצמית והדדית בבעיות בריאותיות נפוצות ועוד.</li>
+        </ul>
+        <p><a href="#workshop-1" style="color: var(--primary); font-weight: 700;">ראה דיון נוסף במניעת והפיכת ההזדקנות + פרטים טכניים (סדנה #1)</a></p>
+        <div class="back-top-row">
+          <a href="#lectures-index" class="back-top-link">↑ חזרה לרשימת ההרצאות והסדנאות</a>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="syllabus-card" id="workshop-4">
+        <h3>4) נהל את מתחיך במקום שהם ינהלו אותך (לציבור הרחב)</h3>
+        <div class="syllabus-sub">
+          או: "אף אחד אינו יכול לדכא (להפחיד, להרגיז לבלבל...וכו') אותך, בלי שיתוף הפעולה שלך" (פראפרזה על משפט של אלינור רוזוולט ז"ל).<br>
+          סדנת מבוא ו/או סדרת מפגשים:
+        </div>
+        <p>
+          סדנה לפיתוח מודעות ושליטה עצמית בחיי היומיום תוך השבחת תקשורת ויחסי גומלין עם הסובבים במשפחה ובקהילה והשפעה לטובה על בריאות ואיכות חיים באופן כללי.
+        </p>
+        <p>
+          תינתן סקירה תיאורטית, כולל השפעת מכלול אורחות החיים (נפשיים-גופניים סביבתיים) על עקה – מניעתה וניהולה המאוזן והיצירתי.
+        </p>
+        <p>
+          יושם דגש מרכזי על התנסות, תרגול והתיימנות בכלים ושיטות פסיכו-פיזיולוגיים בסיסיים, כגון נשימה נכונה ומודעת, הכוונות תשומת-לב והתמרכזות באופן ממוקד אך גמיש תוך חלוקת קשב יעילה (דמיון מכוון/מודרך עצמאית), עיסוי בסיסי עצמי והדדי, עדין ויעיל (ובמיוחד אקו-פרסורה) ועוד.
+        </p>
+        <p>
+          כל זאת -- לשם טיפוח דריכות רגועה ושלווה נמרצת במכלול מצבי החיים, ואף יכולת למנף ולהתמיר את מצבי הלחץ למטרות צמיחה והתפתחות אישית (ומשפחתית/קהילתית), התחשלות-תוך-התעדנות.
+        </p>
+        <p>
+          <strong>עד 20 משתתפים</strong> &bull; משך ומספר המפגשים ייקבעו לפי צרכים, העדפות ואילוצים שונים.<br>
+          <a href="#workshop-5" style="color: var(--primary); font-weight: 700;">ראה גם לקורס ניהול מתחים לבעלי מקצוע מתחומי הבריאות, רווחה וחינוך (#5)</a>
+        </p>
+        <div class="back-top-row">
+          <a href="#lectures-index" class="back-top-link">↑ חזרה לרשימת ההרצאות והסדנאות</a>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="syllabus-card" id="workshop-5">
+        <h3>5) ניהול שיטתי, יעיל ויצירתי של מצבי לחץ, מתח ועקה:</h3>
+        <div class="syllabus-sub">
+          התייחסות הוליסטית (מערכתית) לפיתוח משאבי חוסן והתמודדות, תוך התמקדות באורחות חיים כגורמי סיכון או סיכוי לבריאות ותפקוד נפשיים וגופניים, התפתחות אישית ואיכות חיים משביעי רצון.
+        </div>
+        <p>
+          במתכונות שונות לסטודנטים במקצועות הבריאות, רווחה וחינוך (כחלק מתוכנית הלימודים) ולעוסקים בתחומים אלה (כהעשרה והשתלמות, כולל לגמול השתלמות למורים, אחיות/אחים, עו"ס, פסיכולוגים וכו'). יכול להתאים גם לקהל הרחב על בסיס 'שומע חופשי' בסביבות אקדמיות.
+        </p>
+        <p><strong>רציונאל ותיאור כללי:</strong></p>
+        <p>
+          עקה (או דחק; בלעז: סטרס) נפשית (ומושגים נלווים כמצבי לחץ/מתח, טראומה ופוסט טראומה, מועקה, שחיקה, מצוקה, משבר ועוד) מסוגים ודרגות חומרה ומאפיינים נוספים שונים, מהווה מרכיב וגורם מרכזי בהוויה האנושית במהלך החיים מתחילת ההתפתחות העוברית ועד תומם.
+        </p>
+        <p>
+          מדע הפסיכו-נוירו-ביולוגיה ביסס באופן מובהק את הקשר הנסיבתי בין עקה לבין תחלואה מגוונת חריפה וכרונית בכל הגילאים וכן להפרעות בתפקוד ובאיכות חיים. כמו כן, הוכחו השפעות עמוקות של אורחות חיים (המוגדרים כהרגלי התנהלות שגרתית אך גם במצבים יוצאי דופן, התנהגויות בריאותיות סובייקטיביות ואובייקטיביות) על יכולות התמודדות מוצלחת עם עקה – כלומר: פעולות ומהלכים לביטול או מזעור גורמי לחץ מיותרים, הסתגלות נאותה לנתונים/מצבים שאינם ברי שינוי, או אף מינוף ושדרוג עצמי באמצעות העקה.
+        </p>
+        <p>
+          אורחות חיים אלה כוללים: דפוסי/הרגלי: חשיבה, רגש, תקשורת והתנהגות; נשימה; תזונה, כולל נוזלים; צריכת חומרים שלא למטרת תזונה (כסיגריות, אלכוהול וכו'); פעילות גופנית, יציבה ותנועתיות; שינה; מיקרו-סביבתיות ועוד. כמו כן – בחירות ויישומים בהקשר לעזרה מקצועית במחלות נתונות ובאשר לגישות, שיטות וכלים לשם שיפור אורחות חיים קלוקלים המהווים גורמי סיכון והפיכתם לגורמי סיכוי.
+        </p>
+        <p>
+          לאור זאת, ובמיוחד לאור החמרת המועקות בציבור לאחרונה (כלכלה, ביטחון, אקולוגיה, שחיתות...) מוצע בזאת קורס-סדנה בגישה הוליסטית (מערכתית, ביו-פסיכו-סוציו-אקולוגית), המשלב:<br>
+          <strong>א)</strong> מימדים והיבטים תיאורטיים (כולל סקירת מודלים מדעיים רלוונטיים) של מנגנוני עקה, הקשריה הבריאותיים ואופני התייחסות מונעת וטיפולית בנוגע להיווצרותה ולהשלכותיה.<br>
+          <strong>ב)</strong> למידה מעשית/התנסותית של שיטות ואמצעים פסיכו-פיזיולוגיים ופיזיו-פסיכולוגיים המאפשרים לאדם לנהל את מתחיו, מועקותיו ומצוקותיו (במקום שהם ינהלו אותו) באופן יעיל, מועיל, יצירתי והתורם לתהליכי התפתחות עצמית/משפחתית/קהילתית, ולהשבחת בריאות כללית ואיכות חיים במהלך ימים ושנים.
+        </p>
+        <p>
+          הכשרה זו מתאימה במיוחד לבעלי מקצוע בתחומי הבריאות, רווחה וחינוך; זאת, הן לשימור ושיפור של בריאותם ואיכות חייהם האישיים והמשפחתיים והן כערך מוסף משמעותי לתפקודם המקצועי השוטף ובמצבי לחץ חריג. כמו כן, הם יוכלו לשמש כ'סוכני שינוי' -- נאמני רוגע פעיל וקידום חוסן ובריאות בקרב הנהנים משירותיהם.
+        </p>
+        <p><strong>מטרות:</strong></p>
+        <ol>
+          <li>הבנת מושגים, מונחים, עקרונות ומאפיינים מרכזיים (גורמי ואירועי לחץ/דחק מסוגים שונים, חווית הלחץ ותגובות אובייקטיביות, משאבי התמודדות, סגנונות התמודדות, גורמים מתווכים הקשורים במורכבות מצב, אישיות וסביבה חברתית נתונים, הסתגלות, פוסט-טראומה, התעצמות ע"י עקה – התחשלות-גם- התעדנות) ומנגנונים פתו-פסיכו-פיזיולוגיים של תופעות העקה והשלכותיה הבריאותיות – נפשית וגופנית -- בקונטקסט של התייחסות הוליסטית (מערכתית).</li>
+          <li>הכרת מודלים מדעיים וסגנונות תרבותיים שונים של התמודדות אישית, משפחתית וקהילתית ו/או תמיכה וטיפול מקצועיים, עם דגש על מודל החוסן הרב-מימדי.</li>
+          <li>רכישת ידע, גישה, כלים ומיומנויות רב תחומיים באשר לניהול (כולל גישה מונעת מושכלת) מתחים חריפים וכרוניים מגוונים לשם עזרה והשבחה עצמיים (והדדיים ככל המתבקש) יעילים ויצירתיים (כולל הסתייעות זהירה בגורמים מקצועיים לפי הצורך). זאת, באמצעות אורחות חיים תומכי ומקדמי היגיינה נפשית, בריאות כללית ואיכות חיים וכן, על ידי מגוון שיטות טיפוליות.</li>
+          <li>הכשרה בסיסית של המשתתפים כ'נאמני חוסן' ו'סוכני שינוי' בנושא הנדון עבור סביבותיהם האישיות והמקצועיות.</li>
+        </ol>
+        <p>
+          <strong>היקף הקורס:</strong> 24-60 שעות. אפשרי מתכונות מתומצתות יותר &bull; <strong>עד כ-20 משתתפים.</strong><br>
+          מערכי השיעורים, ביבליוגרפיה והמטלות זמינים למתעניינים.
+        </p>
+        <div class="back-top-row">
+          <a href="#lectures-index" class="back-top-link">↑ חזרה לרשימת ההרצאות והסדנאות</a>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="syllabus-card" id="workshop-6">
+        <h3>6) הכשרת נאמני בריאות</h3>
+        <div class="syllabus-sub">
+          (להנחיית והעצמת אורחות חיים תומכי ומקדמי בריאות ואיכות חיים) &bull; הצעה לקורס/סדנה
+        </div>
+        <p>
+          מיועד לסטודנטים במקצועות הבריאות, רווחה וחינוך (כחלק מתוכנית הלימודים), לעוסקים בתחומים אלה (כהעשרה והשתלמות) ולקהל הרחב.
+        </p>
+        <p><strong>תקציר:</strong></p>
+        <p>
+          מוכח מדעית בצורה מובהקת, ש'התנהגויות בריאותיות' (אורחות חיים) -- נפשית, גופנית וסביבתית (חברתית ואקולוגית) -- משפיעות באופן עמוק וגורף על שכיחות וחומרת תחלואה לסוגיה (כולל הפיכותה הפוטנציאלית) ועל משאבי בריאות חוסן ואיכות חיים. במקביל, ידוע היטב שמגוון רחב של אורחות חיים משובשים בעליל, רווחים בציבור באחוזים גבוהים. כמו כן, אופיינה ובוססה נחיצות הפעלת 'סוכני שינוי' מיומנים בקרב קהלי יעד, אשר יוכשרו לאפשר ולסייע בתהליכי שיפור אורחות חיי הפרט וקידום בריאותו עקב כך, במסגרת משפחתו וקהילתו. כל זאת – רלוונטי במיוחד לאנשי בריאות, חינוך ורווחה. התוכנית להלן מוצעת כמענה.
+        </p>
+        <p><strong>צורך ורציונל: אורחות חיים כגורמי סיכון או סיכוי וחשיבות הכשרת נאמני/מובילי בריאות.</strong></p>
+        <p>
+          רפואת אורחות חיים מתייחסת לאחריותו ובחירותיו בפועל של כל אדם (בכפוף למגבלות אובייקטיביות) באשר לבריאותו ואיכות חייו בהיבטים גופניים, נפשיים וסביבתיים. תחום זה הופך בעשורים האחרונים לציר מרכזי ברפואה המודרנית הן בהקשר ל'רפואה מונעת' (סבילה-גם-פעילה) ו'קידום בריאות' והן בהקשרים קליניים. זאת, לנוכח תהליך מתמשך ומחמיר של התפתחות מגוון מחלות כרוניות ניווניות (גם בנוער וילדים) הקשורות -- אבחונית וטיפולית -- לתזונה מוגזמת או לקויה, פעילות גופנית בלתי מספקת ו/או מגוונת, מתח רב, עישון, חסר או עודף שינה ושינה בלתי-איכותית דיה, מיקרו-סביבה (אקולוגית) הפוגעת בבריאות וכו' וכן, לנוכח העובדה שאחוזים גבוהים מאוד באוכלוסיה, -- כולל ובמיוחד בגילאים הצעירים --נוקטים באורחות חיים קלוקלים.
+        </p>
+        <p>
+          עם זאת, קיים עדיין פער גדול בין היעילות המוכחת היטב של הקניה סדורה, נמרצת ועקבית של מידע וכלים איכותיים בנוגע לאורחות חיים נאותים – כולל ובמיוחד ע"י שיתופם של פעילי בריאות כ'סוכני שינוי' (עבור יחידים, כמעט בכל גיל ומצב בריאותי/תפקודי ומשפחות/קבוצות/קהילות, תוך דגש על מימדי אחריות ועזרה הדדיים) -- לבין כמות ואיכות המשאבים הזמינים בפועל.
+        </p>
+        <p>
+          בישראל מוצעות תוכניות לימודים לתואר שני ושלישי בחינוך לבריאות וקידום בריאות, אך הן מיועדות בעיקר להכשרת דרגים ניהוליים במערכות גדולות; אמנם, בשטח פועלים רופאים, אנשי סיעוד, תזונאים, פיזיותרפיסטים, פסיכולוגים, עובדים סוציאליים ובעלי מקצועות פארה-רפואיים אחרים, האמורים ומנסים כמיטב יכולתם לחלוק מידע ולהנחות לקוחות (הסובלים, ככלל, מחולי כזה או אחר) בהיבטים שונים של התנהלות אישית התורמת לבריאותם ולאיכות חייהם; יש בין אלה, וכן גם סייעני בריאות מגוונים (מדריכי כושר ותנועתיות, מאמנים בניהול מתחים, תקשורת בין-אישית והתפתחות אישית, מומחים בעיצוב סביבתי/מיקרו-אקולוגי וכדו'), השמים דגש רב יותר על הדרכה והעצמה בניהול בריאות מאשר על טיפול בבעיותיה. כמו כן, יוזמות רבות של קידום בריאות בישראל ובעולם עשו שימוש ב'סוכני שינוי' אשר הוכשרו להפצת מידע ועידוד ליישומו למטרות ובקהלים ספציפיים.
+        </p>
+        <p>
+          אולם, לא קיימת הכשרה כוללנית וממצה דיה המתמקדת ומתמחה בהתנהגויות/מיומנויות בריאותיות, ומתייחסת לכל תחומי אורחות החיים (נפשית, גופנית וסביבתית, על מגוון תתי-נושאיהם -- כגורמי סיכון או סיכוי מובהקים לבריאות וחוסן, תפקוד ואיכות חיים משביעי-רצון דיים.
+        </p>
+        <p>
+          ההצעה הנוכחית מהווה מענה לצורך מובהק בקורס פורמאלי רב-תחומי, תיאורטי ומעשי, לנאמני/סוכני בריאות איכותיים המסוגלים לאפשר וכן לתמוך באופן מקיף, מעמיק ועקבי בתהליכי השבחת אורחות חיים ברמת הפרט (ומשפחתו) וברמת הקהילייה/קהילה. הכשרה כזו משמעותית במיוחד עבור אנשי חינוך, בריאות ורווחה במסגרותיהם המגוונות.
+        </p>
+        <p>
+          ההכשרה כנאמני בריאות מהווה נגזרת מתומצת של קורס למדריכי בריאות מוסמכים אשר פותח ע"י דר' שמואל רנדור מנהל תחום קידום בריאות בעמותת משאבים ובעמותת הלב"ב וקיבל הסמכה ב- 2007 ממכון משאבים כלימודי תעודה, בחסות המכללה האקדמית תל חי (המחזור הראשון -- אנשי מקצוע בתחומי הבריאות, רווחה וחינוך ממוצא אתיופי-- בתמיכת הקואליציה הישראלית לטראומה והפדרציה של יהודי ניו יורק, ובשיתוף עם עמותת טנא בריאות נמצא בשלבי סיום). למרות מתכונת ההכשרה המצומצמת יותר, נאמני בריאות עשויים לתרום רבות להפצת והטמעת אורחות חיים תומכי ומקדמי בריאות בפרטים, משפחות וקבוצות בקהילה, על מגזריה השונים ובעלי צרכים מיוחדים בה.
+        </p>
+        <p><strong>שיטות העבודה ומטרות:</strong></p>
+        <ul>
+          <li>רכישת מידע תיאורטי והכשרה (התנסות ותרגול) בתתי-תחומים של שדה אורחות החיים כגורמי סיכון או סיכוי לחוסן/בריאות ואיכות חיים טובים דיים.</li>
+          <li>פיתוח מיומנויות בתקשורת והדרכה בין-אישית ובהנחיית קבוצות, כולל שיטות העצמה, הנחיה ותמיכה בשינוי הרגלים וכן, מידענות בריאותית וקהילתית, שתדלנות ואתיקה בסיסיים.</li>
+        </ul>
+        <p><strong>דרישות סף:</strong></p>
+        <p>
+          ניתן להכשיר לשם כך גם חסרי השכלה פורמאלית בשדות הרפואה/בריאות, רווחה וחינוך, לאור ניסיון משרד הבריאות באנגליה בשנים האחרונות ותוכניות לימודים דומות עליהן דווח ברחבי העולם. יש לציין שבמסגרת לימודי תעודה כמאמני בריאות המוצעים באנגליה ואפילו תעודת בגרות אינה דרישת סף וניתן להסתפק בראיון מקיף והתרשמות מניסיון חיים אישי ומקצועי. ברור שהכשרת בעלי מקצוע בתחומים הנ"ל כמדריכי בריאות, תאפשר הפצת מידע ומיומנויות בריאותיים איכותיים בסביבותיהם המקצועיות (והאישיות) -- באופן שיטתי, רציף ובעל סיכויים טובים יותר להגיע למספר רב יחסית של אנשים העשויים להפיק תועלת מיוזמה זו.
+        </p>
+        <p><strong>תכנים:</strong></p>
+        <ul>
+          <li>סקירה כללית של שדה קידום הבריאות ברמות הפרט, קהילה, אקולוגיה, שירותי בריאות ומדיניות בפועל.</li>
+          <li>אורחות חיים (התנהגויות בריאות, כולל סובייקטיביות).</li>
+          <li>הדגשים באנטומיה, פיזיולוגיה ופסיכולוגיה הקשורים להעמקה והשבחה גוברים של משאבי בריאות וחוסן במהלך החיים, בכל גיל (בנוסף ומעבר למניעת מחלות והתייחסות טיפולית אליהן).</li>
+          <li>דפוסי ותהליכי חשיבה, רגש, התנהגות ותקשורת יעילים ובונים; היבטים מנטאליים של ניהול מתחים\רוגע, שיפור הרגלים ומימוש עצמי; דגש מיוחד על הדמיה ויישומיה, ככלי בריאותי רב- עוצמה.</li>
+          <li>נשימה נכונה ויישומיה.</li>
+          <li>תזונה (כולל נוזלים) נבונה.</li>
+          <li>פעילות גופנית (אירובית ואנ-אירובית) ותנועתיות שגרתית (יציבה, תזוזה תפקודית יומיומית, שיווי משקל וקואורדינציה, התמתחויות, הרפיה שרירית -- כולל עקרונות ושיטות בסיסיים של עיסוי עצמי והדדי) נאותות.</li>
+          <li>שינה איכותית.</li>
+          <li>סביבה (מיקרו-אקולוגיה) בטיחותית ו'ידידותית' לבריאות.</li>
+          <li>שונות ונושאים רב תחומיים -- איזון בין עבודה, מנוחה, נופש/בילוי/בידור/משחק (כולל פעילות גופנית בשעות הפנאי) ופעילות יצירתית; מיניות; הרגלי צריכת חומרים; חשיבות הגיוון ברוב תחומי החיים; עזרה עצמית והדדית בבעיות בריאותיות נפוצות ועוד.</li>
+          <li>אומנות ומיומנות באימון וקידום בריאות מקצועי.</li>
+          <li>עקרונות ושיטות של העצמה, הנחיה ותמיכה בשינוי הרגלים והתנהגויות בריאות ברמת הפרט (כולל בהקשר המשפחתי).</li>
+          <li>תרגולת מעשית בהדרכת התנהגויות בריאותיות מסוימות.</li>
+          <li>אלמנטים של מידענות ושתדלנות בריאותית.</li>
+          <li>שיקולים אתיים ומדיקו-לגליים.</li>
+        </ul>
+        <p>
+          <strong>היקף הקורס: שני פורמאטים:</strong><br>
+          1. 60 שעות (12-20 מפגשים, 3-5 שעות שעון כ"א). מתאים לגמול השתלמות למורים, אחיות/אחים, עו"ס, פסיכולוגים וכו'.<br>
+          2. מתכונת מתומצתת יותר: 36 שעות שעון. עבור קהלי יעד אחרים.<br>
+          <strong>עד 20 משתתפים.</strong> מערכי השיעורים, ביבליוגרפיה והמטלות זמינים למתעניינים.
+        </p>
+        <div class="back-top-row">
+          <a href="#lectures-index" class="back-top-link">↑ חזרה לרשימת ההרצאות והסדנאות</a>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="syllabus-card" id="workshop-7">
+        <h3>7) מורים והורים כסוכני שינוי (נאמני/מובילי בריאות נפשית וגופנית) בהקשר להפרעות קשב, ריכוז והתנהגות – בגישה הוליסטית</h3>
+        <div class="syllabus-sub">תקציר הרצאת/סדנת מבוא למורים והורים.</div>
+        <p>
+          סקירה כללית מבוססת מדע עדכני, של הפרעות קשב, ריכוז והתנהגות (ADHD, ADD, ODD), בהתייחסות הוליסטית (מערכתית, כוללנית): תופעות 'קליניות' מרכזיות ונלוות, מנגנונים פסיכו-נוירו-פיזיולוגיים, היבטים אבחוניים וגישות טיפוליות.
+        </p>
+        <p>
+          אין עוררין על יעילותם הסימפטומאטית, במרבית המקרים, של ריטלין ותרופות אחרות המקובלות כיום, גם בהתחשב בתופעות לוואי ידועות. עם זאת – בהתאמה אישית -- יש צורך מובהק:
+        </p>
+        <ul>
+          <li>בטיפוח אורחות חיים המהווים גורמי סיכוי לבריאות ואיכות חיים משביעי רצון דיים באופן כללי. מדובר בהרגלי התנהלות נפשיים (דפוסי חשיבה, רגש, אינטואיציה, תקשורת והתנהגות; ניהול מתחים, רוגע, שאיפות ויצירתיות), גופניים (נשימה; תזונה/נוזלים וצריכת חומרים בהקשרים בלתי תזונתיים; פעילות גופנית ותנועתיות; שינה) ומיקרו-סביבתיים/אקולוגיים (מודעות בטיחותית פעילה, היבטים של כימיקלים, קרינה, תאורה, רעשים, אסטטיקה, בעלי חיים, ועוד).</li>
+          <li>בעיצוב ושילוב מושכל של תשתיות ותנאים משפחתיים (כולל סמכות הורית נאורה, מושכלת איתנה-גם-גמישה, תקשורת ואווירה רגשית כללית, שיקולים תזונתיים ועוד), פדגוגיים (שיטות דידקטיות/אקדמיות, סביבות למידה, חינוך התנהגותי) וקהילתיים אחרים.</li>
+          <li>לשקול גם הסתייעות טיפולית בשיטות וכלים בלתי-תרופתיים מסוימים המגובים מדעית (או לפחות בהיגיון פסיכו-פיזיולוגי מוצק, במידה ולא נחקרו במידה מספקת).</li>
+        </ul>
+        <p>
+          כל אלה, כדי לנסות ולהסתדר ללא טיפול תרופתי, לתמוך בהשפעתן המיטיבה של התרופות אם הוחלט לעשות בהן שימוש ולמזער את סיכוניהן, ולעודד תהליכי העצמה והתפתחות אישית אשר יאפשרו במהלך הזמן תפקוד תקין (ונעים ככל הניתן) ללא תרופות, גם בתנאי לחץ, מועקה ותחושת משבר.
+        </p>
+        <p>
+          יוצגו וינותחו בקצרה טיפולים קוגניטיביים והתנהגותיים למטרת טיפוח חשיבה מאוזנת ('חיובית') דינאמית; יישומי נשימה נכונה והדמיות ('דמיון מודרך' להשראת הרפיה, אישוש ומירכוז/איזון/אינטגרציה) -- לשם פיתוח בקרה/ומשמעת/שליטה עצמית; תזונה (כולל נוזלים) פונקציונאלית ותוספותיה; פעילות גופנית מובנית (כולל יוגה אומנויות לחימה בסגנונות שונים, אאוריטמיקה, ועוד) ותנועתיות נאותה (יציבה, תזוזה שגרתית, התמתחויות, שחרור/ניעור שרירי) כתרפיה; מוזיקה ואומנויות אחרות; מגע טיפולי; השפעות סביבתיות כולל עצם השהות בחיק הטבע ומעורבות עם בעלי חיים וגינון; וביו (נוירו)-פידבק. יאוזכרו גם צמחי מרפא מסוימים, רפואה סינית, הומיאופתיה, קינזיולוגיה חינוכית ועוד מתחומי הרפואה ה'משלימה'.
+        </p>
+        <p>
+          יוקדש זמן להתנסות חוויתית – ולו על קצה המזלג – בנשימה נכונה ושימושיה, הדמיות מועילות, יציבה ותנועתיות תומכי בריאות ותפקוד, ועיסוי עצמי והדדי אלמנטארי אך יעיל להפגת מתח שרירי ונפשי.
+        </p>
+        <p>
+          למורים/מורות יש תפקיד מרכזי בסיוע לתלמידיהם הלוקים בקשיי ריכוז/קשב/התנהגות, לא רק להתמודד ולהסתגל אלא גם להיבנות, להתמנף ולמצות פוטנציאלים התפתחותיים ויצירתיים. לצורך כך על המורים/מורות להשתלם במידע וכישורי אורחות חיים תומכי ומקדמי בריאות כללית, תפקוד, צמיחה, ואיכות חיים, ולהתוודע לאפשרויות טיפוליות רלוונטיות. עקב כך הם יוכלו לשמש כדוגמה וכמשאב חיוני -- כנאמני בריאות, חוסן וגמישות נפשית וגופנית (כסוכני שינוי) -- לא רק לילדים/נוער ה'בעיתיים' (תוך כדי הוראה פרונטאלית ו/או במסגרת עזרה/העצמה פרטניים) ולהוריהם, אלא גם בהקשר לתלמידים ה'נורמטיביים'. מטרת מפגש המבוא הינה לתרום בכיוון זה.
+        </p>
+        <p>
+          הנושא ניתן להנחיה כקורס-סדנה במתכונות שונות לסטודנטים להוראה ולאנשי חינוך (כולל התאמה לגמול השתלמות) וכן, לקבוצות הורים.
+        </p>
+        <div class="back-top-row">
+          <a href="#lectures-index" class="back-top-link">↑ חזרה לרשימת ההרצאות והסדנאות</a>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="syllabus-card" id="workshop-8">
+        <h3>8) 'קידום בריאות' — קורס/סדנה</h3>
+        <div class="syllabus-sub">
+          במתכונות שונות לסטודנטים במקצועות הבריאות, רווחה וחינוך (כחלק מתוכנית הלימודים) ולעוסקים בתחומים אלה (כהעשרה והשתלמות, כולל לגמול השתלמות למורים, אחיות/אחים, עו"ס, פסיכולוגים וכו').
+        </div>
+        <p><strong>מטרות ותיאור הקורס:</strong></p>
+        <p>
+          סקירה כללית של 'קידום בריאות' כמימד מרכזי בגישה מערכתית (הוליסטית) לבריאות, חולי ואיכות חיים מהבחינות הנפשית, גופנית ומיקרו/מקרו-סביבתית (חברתית ואקולוגית). זהו תחום מקצועי פורמלי הנשען על עקרונות ושיטות של 'רפואה מונעת' לשם שימור בריאות תקינה וכנדבך חשוב בתהליכי שיקום בריאות – אך בנוסף חותר לטיפוח ושדרוג מתמשך של משאבי התמודדות והתפתחות אישית, קהילתית ואקולוגית; זאת, תוך דגש רב על אחריותו האישית, עמדותיו, בחירותיו ופעולותיו של הפרט – ככל שהוא מסוגל ברגע נתון – בנוגע לבריאותו ואיכות חייו, כולל מידת ואופני שיתוף הפעולה שלו עם שירותי בריאות קליניים וקהילתיים המתאימים למצבו.
+        </p>
+        <p>
+          הקניית מידע בסיסי באשר למושגי יסוד, עקרונות, גישות ומודלים העוסקים בהתהוות, שינוי ועיצוב 'התנהגויות בריאותיות' ו'אורחות חיים' כ'גורמי סיכון או סיכוי', 'ניהול עצמי', 'מיומנות עצמית' ו'העצמה' של יכולות שימור ושיפור בריאות כל פרט באופן עצמאי (בכפוף למגבלות גיל, תפקוד ואמצעים) – תוך הדדיות הולמת; זאת, במידה רבה, באמצעות 'חינוך לבריאות': הפצת מידע והכשרה איכותיים על ידי מערכות וספקי שירותי בריאות, ברמת הפרט והקהילה. יאוזכרו אילוצים טכנים ולוגיסטים וכן שיקולים כלכליים, אקולוגיים, אקדמיים ופוליטיים גלובלים מורכבים המתנים במידה משמעותית – לטוב ולרע – תהליכי קביעת מדיניות, הקצאת משאבים, תכנון, ישום ובקרת איכות בשדה קידום הבריאות.
+        </p>
+        <p>
+          התוודעות לתוכניות קידום בריאות ברמות שונות בארץ ובעולם ולימוד ראשוני של היבטים הקשורים לפיתוח, ביצוע והערכת תוכניות לקידום בריאות, פרטנית וקבוצתית (איסוף נתונים, זיהוי צרכים ומשאבים, אסטרטגיות תכנון, הפעלה, בקרת איכות והפקת לקחים, יכולות הפצת מידע, הנחייה והדרכה באמצעים מגוונים).
+        </p>
+        <p>
+          במהלך הקורס יושם דגש מרכזי על הקניית מידע, כלים ומיומנויות בסיסיים בתתי-נושאים של שדה אורחות החיים תומכי ומקדמי בריאות ואיכות חיים: דפוסי חשיבה, רגש והתנהגות מועילים; שליטה עצמית וניהול מתחים\רוגע באופנים יעילים ויצירתיים, כולל תקשורת בונה; נשימה נכונה ושימושיה; תזונה (כולל נוזלים) נבונה; פעילות גופנית ותנועתיות (יציבה, תזוזה, מתיחות, הרפיה ועוד) נאותים; סביבה 'ידידותית' ובטיחותית; וכן, שונות.
+        </p>
+        <p>
+          תהליך הכשרה זה יהווה תרומה אפשרית לבריאות ואיכות חיי המשתתפים בהקשרים פרטיים (כולל במסגרת תפקודם המקצועי באשר הוא) וכן ליכולתם לשמש כ'סוכני שינוי' לקידום בריאות עבור הסובבים אותם.
+        </p>
+        <p>
+          <strong>היקף הקורס:</strong> ייקבע לפי שיקולים שונים. מומלץ מ-24 שעות שעון ומעלה.<br>
+          <strong>הערות:</strong> ניתן להרחיב כל נושא לסדרת מפגשים או לחוד. זמינים גם נושאים אחרים לפי צרכי והעדפות הקהל. מערכי השיעורים, ביבליוגרפיה והמטלות זמינים למתעניינים.
+        </p>
+        <div class="back-top-row">
+          <a href="#lectures-index" class="back-top-link">↑ חזרה לרשימת ההרצאות והסדנאות</a>
+        </div>
+      </article>
+
+      <!-- 9 (שונות) -->
+      <article class="syllabus-card" id="workshop-9">
+        <h3>9) שונות — סדנאות והרצאות ייעודיות</h3>
+        <div class="syllabus-sub">
+          הערות: ניתן להרחיב כל נושא לסדרת מפגשים או לחוד. זמינים גם נושאים אחרים לפי צרכי והעדפות הקהל.
+        </div>
+
+        <div class="sub-workshop">
+          <h4>סדנת משקל תקין</h4>
+          <p>
+            מטרת ההרצאה/סדנה הינה להקנות למשתתפים מידע וכלים יעילים באשר למניעה וטיפול במשקל עודף, וזאת ללא דיאטה אלא בעזרת תזונה נכונה - מספקת, מגוונת, מבוקרת אך גמישה (לפי מספר מצומצם של עקרונות יסוד, בלי צורך בחישובי קלוריות או בהיצמדות לתפריטים מסוימים). כמו כן, פעילות גופנית בסיסית (לאו דווקא מאומצת) במהלך השבוע, ניהול יצירתי של מתחים ומצבי לחץ באופן יומיומי (למשל, עם שיטות נשימה מודעת פשוטות, ו"מדיטציה" פעילה, בזמן אמת). כמו כן אמצעים נוספים (כולל, לפי הצורך, שימוש זמני בתוספי תזונה וצמחי מרפא) המיועדים להשבחה ותמיכה במערכות העיכול וההפרשה (מעיים, כליות, עור וכו'), בזרימת דם ולימפה וחילוף החומרים ול'שיפוץ תשתיות' כללי.
+          </p>
+          <p style="margin-bottom: 0;">
+            לפי תכנית שיפור אורחות חיים יסודית זו, ניתן להיפטר משומן מיותר בהדרגה (4-2 ק"ג בחודש) ולשמור בעתיד בקלות יחסית על משקל תקין בגבולות סבירים, תוך המשך התנהלות התומכת בהשבחת בריאות, תפקוד, ושמחת חיים.
+          </p>
+        </div>
+
+        <div class="sub-workshop">
+          <h4>תקשורת תוך- ובין-אישית</h4>
+          <p>
+            מפגש(ים) המיועד(ים) לרכישת מידע והתנסות בכלים באשר לתקשורת יעילה, מכבדת ובונה של אדם בינו לבין עצמו ובינו לבין הסובבים אותו במשפחה ובקהילה. זאת ובמיוחד, תוך ניהול יצירתי של מתחים וחיכוכים, והתכוונות למציאת פתרונות בגישת ה'רווח-רווח': כולם אמורים לצאת נשכרים.
+          </p>
+          <p style="margin-bottom: 0;">
+            עבודה עצמית ומאמץ משותף סבלניים ועקביים בשדה התקשורת התוך- ובין-אישית תורמים בוודאות להשבחה גוברת של איכות החיים במהלך הימים והשנים.
+          </p>
+        </div>
+
+        <div class="sub-workshop">
+          <h4>סדנת מגע טיפולי וחוויתי</h4>
+          <p>
+            הצורך במגע הינו צורך אנושי בסיסי ויומיומי בכל גיל. אמנות המגע היא היכולת לתת תשומת לב, איש לרעהו או לעצמו, באמצעות מגע גופני (בדרך כלל תוך שימוש בידיים) במטרה להשרות נועם וחוסן על ידי הרגעה והרפייה נפשית וגופנית (בעיקר במערכת השרירים, כללית או באופן ממוקם), או, לחילופין -- אישוש והמרצה.
+          </p>
+          <p><strong>מטרות הסדנה:</strong></p>
+          <ul style="margin-bottom: 0;">
+            <li>לשמש כמבוא התנסותי לטכניקות עיסוי עצמי והדדי בסיסיות ועדינות המשמשות במסג' שוודי, שיאצו ואקופרסורה, רפלקסולוגיה, שיטת טראגר ועוד.</li>
+            <li>לתרגל ולקדם יישומים אפשריים בחיי היומיום באופן יעיל וזהיר, כרפואה מונעת, כטיפול (ברגישויות/כאבים ו/או הגבלות תנועתיות עקב כיווצי שרירים ובהפרעות רבות אחרות), או פשוט כמקור להנאה ושמחה נטו במשפחה ובין ידידים.</li>
+          </ul>
+        </div>
+
+        <div class="sub-workshop">
+          <h4>סדנת טאי-צ'י וצ'י-קונג — מבוא כללי ושימושים יומיומיים</h4>
+          <p>
+            טאי-צ'י הינה אומנות תנועה והתמודדות (כולל לחימה) רגועה, רכה למראה, אך האוצרת עוצמה מבוקרת רבה. זוהי אומנות עתיקה (מוצאה מסין, לפני אלפי שנים), אך רלוונטית מאין כמוה לעידן המודרני. מדובר גם ב'מדיטציה בתנועה', המעודדת שליטה עצמית, שלווה נמרצת, חוסן, גמישות, זריזות ויכולות ריכוז, שיווי משקל וקואורדינציה כללית – גופנית ונפשית. קיימות הוכחות מדעיות מרובות באשר לתועלת שבשימוש שוטף בטאי-צ'י לבריאות גופנית ונפשית, כולל ובמיוחד בגילים מתקדמים.
+          </p>
+          <p>
+            בצ'י-קונג מושם דגש על אומנות הנשימה המודעת, מיקוד וניתוב תשומת-הלב והתכוונות מאוזנת פעילה; ניתן לתארו בקיצור נמרץ, כטאי-צ'י פנימי.
+          </p>
+          <p style="margin-bottom: 0;">
+            מטרת המפגש לשמש כמבוא לטאי-צ'י וצ'י-קונג, תוך התמקדות בהיבטים שימושיים בחיי היומיום, הקשורים בגוף (יציבה, תנועתיות שגרתית, תרגולת מועילה לשם תחזוקת והשבחת חוסן השלד והרקמות הרכות, מערכת הלב וזרימת הדם וכו') ובנפש (ניהול יעיל, מועיל ויצירתי של עומסים/מתחים שוטפים, של תקשורת בין-אישית ותוך-אישית ועוד).
+          </p>
+        </div>
+
+        <div class="sub-workshop">
+          <h4>מניעה וטיפול במחלות עונתיות שכיחות באמצעים פשוטים וביתיים</h4>
+          <p style="margin-bottom: 0;">
+            מטרת ההרצאה/סדנה היא להקנות למשתתפים מידע וכלים פשוטים ויעילים באשר לתחזוקה בריאותית עצמית שוטפת, ובין היתר, למניעת מחלות עונתיות שכיחות, וכן באשר לטיפול בהן. זאת ע"י שתייה ותזונה מתאימים, תוספות מזון, צמחי מרפא והומאופטיה, שיטות גרגור עמוק ושטיפת אף במי-מלח, התייחסות נכונה למאזן חום גוף בתנאים משתנים, ניהול מתחים והיבטים אחרים הקשורים לאיכות מערכת החיסון.
+            <br><a href="#workshop-1" style="color: var(--primary); font-weight: 700;">ראה גם סדנה #1</a>
+          </p>
+        </div>
+
+        <div class="sub-workshop">
+          <h4>"הילינג": קל ונחוץ לממש בחיי היום-יום — מבוא לנושא והתנסות מוחשית</h4>
+          <p>
+            "הילינג", לפי הגדרה מקובלת הינו התכוונות חומלת ומאחלת טוב של אדם כלפי אחר או כלפי הוא עצמו, ללא נחיצות במגע ישיר, תוך אפשרות להנחית ומיקוד תשומת הלב באמצעות הדמיות מגוונות, תנועות ידיים, שימוש במילים, צלילים, סמלים ועוד.
+          </p>
+          <p>
+            תופעות שבגדר "הילינג" תוארו במהלך ההיסטוריה בתרבויות ומסורות רבות; ותחום זה משגשג בתקופה הנוכחית בכל רחבי כדור הארץ, כולל - יותר ויותר - בישראל. מוכרות כיום עשרות אסכולות ושיטות תחת כותרת ה-"הילינג", כמו "רייקי", "ריפוי קוטבי", "ביו-אנרגיה", "מגע מרפא", "טיפול בקונדליני", "צ'י-קונג" ורבים אחרים, כולל (ובמיוחד) תפילה. יש כמובן להבחין בין פעילות לגיטימית – גם אם בהקשר עסקי – לבין ניצול ושרלטנות פלילית.
+          </p>
+          <p>
+            חשוב לציין, שקיימת ספרות מדעית ענפה התומכת באמיתות התופעה ושימושיה האפשריים בשדה הבריאות.
+          </p>
+          <p><strong>מטרות הסדנה הנוכחית הינן:</strong></p>
+          <ul style="margin-bottom: 0;">
+            <li>לשמש כבמבוא וסקירה כללית של שדה ה"הילינג" ולהתמקד במכנה המשותף של השיטות השונות.</li>
+            <li>לעזור לכל משתתף לשפר את חיבורו עם הכוח המרפא שטבוע וקיים בתוכו מלכתחילה ולעשות בו שימוש מבוקר, מועיל ובונה - עצמית והדדית, באופן שוטף.</li>
+            <li>לשים דגש על הצורך בזהירות מרבית באשר לשיקולים אתיים וטכניים מרכזיים.</li>
+            <li>לצייד את המשתתפים בתוכנית תרגול גמישה לצורך המשך העמקת והרחבת יכולותיהם כ"הילרים" בעצמם.</li>
+          </ul>
+        </div>
+
+        <div class="back-top-row">
+          <a href="#lectures-index" class="back-top-link">↑ חזרה לרשימת ההרצאות והסדנאות</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- מקטע בריאות הוליסטית - מהי ? -->
+  <section id="holistic" class="alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>בריאות הוליסטית - מהי ?</h2>
+      </div>
+
+      <div class="holistic-visual-header">
+        <div class="holistic-pillar">
+          <img
+            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=80"
+            alt="היבט גופני ותזונה טבעית"
+            loading="lazy"
+          />
+          <div class="holistic-pillar-caption">המימד הגופני ואורחות חיים</div>
+        </div>
+        <div class="holistic-pillar">
+          <img
+            src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=700&q=80"
+            alt="היבט נפשי שלווה וניהול מתחים"
+            loading="lazy"
+          />
+          <div class="holistic-pillar-caption">המימד הנפשי, תודעה וחוסן</div>
+        </div>
+        <div class="holistic-pillar">
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80"
+            alt="היבט סביבתי ומיקרו-אקולוגי"
+            loading="lazy"
+          />
+          <div class="holistic-pillar-caption">המימד החברתי והמיקרו-אקולוגי</div>
+        </div>
+      </div>
+
+      <!-- מאמר 1 -->
+      <article class="article-card">
+        <h3>1) גישה/בריאות/רפואה מערכתית (הוליסטית) - הסבר כללי קצר</h3>
+        <p>
+          המונח "רפואה מערכתית" (systems medicine) מוצע בזאת כמבטא היטב ובאופן פורמלי את מהות המונח הנפוץ 'רפואה הוליסטית' במובנו המקורי של יאן סמאט (1904) שהגדיר 'הוליזם' כ'מכלול המהווה יותר מסך כל מרכיביו' כלומר: סינרגיזם. המודל ההוליסטי מכיל את הרפואה ה'קונוונציונלית' ואת הרפואה ה'משלימה/חילופית' גם יחד ומהווה מכנה ומסגרת משותפים למלוא מגוון הגישות לשימור וקידום בריאות ואיכות חיים ובן לטיפול בשיבושיהם החריפים והכרוניים.
+        </p>
+        <p>
+          רפואה 'משלימה/חילופית', על תתי-תחומיה האבחוניים והטיפוליים הרבים, זוכה יותר ויותר לביסוס מדעי ולהכרה ממסדית בארץ וברחבי העולם. בקופות החולים וכמעט בכל בית חולים בארץ קיימים כיום שירותי רפואה משלימה/חילופית; קיימת ספרות מקצועית מדעית/קלינית ענפה, באשר ליעילות תחומים ושיטות שונים בה - במצבים חריפים מגוונים וכן, במיוחד, במחלות כרוניות-ניווניות רבות, להן אין עדיין לרפואה הקונוונציונלית מענה נאות.
+        </p>
+        <p>
+          בציבור רווחת הדעה שרפואה הוליסטית היא למעשה רפואה משלימה/חילופית, כלומר: אוסף של אסכולות וטכניקות בלתי-קונוונציונליות - מבוססות-מדע ולגיטימיות ככל שתהיינה -- כתזונה מועשרת, צמחי מרפא, הומיאופתיה, דיקור, טיפולים ידניים (שיאצו, רפלקסולוגיה, כירופרקטיקה, אוסטיאופתיה ועוד), טיפולים יציבתיים/תנועתיים (אלכסנדר, פלדנקרייז ועוד), 'התכוונות מיטיבה' ('הילינג'), פסיכותרפיות חדשניות, שילובים למיניהם (רפואה נטורופתית, אנתרופוסופית, סינית, אירווודית וכד') ועוד. אולם, השימוש במגוון רחב של שיטות וכלים אינו המאפיין העיקרי, וחשוב להדגיש את עקרונותיה הבסיסיים של גישה מערכתית-הוליסטית:
+        </p>
+        <p>
+          <strong>א.</strong> תפיסת כל אדם והתייחסות אבחונתית וטיפולית אליו כמכלול ושלמות הקיימת, פועלת, ומתפתחת תוך יחסי-גומלין פנימיים בין מרכיבי המכלול, וחיצוניים בין המכלול לסביבתו החברתית (רגשית, רעיונית, כלכלית וכד') והאקולוגית (במובן המקובל של המילה - מבחינה ביולוגית, פיזית וכימית).
+        </p>
+        <p>
+          <strong>ב.</strong> הכרה במנגנוני בקרה וויסות, הגנה, החלמה והשבחה, הטבועים במערכת (ופועלים תוך שימוש בתזמון ואיזון דינמי של רבדי שיווי-משקל ומאגרי-יכולות פונקציונאליות, הן זמינות והן פוטנציאליות/חביוניות) ושיתוף פעולה עמם, כולל תמיכה בהם ועידודם או מיתונם על פי הצורך - תוך מעורבות פולשנית קטנה ככל האפשר (אף אם מדובר בצמחי מרפא, פסיכותרפיה או טיפול ידני).
+        </p>
+        <p>
+          <strong>ג.</strong> תפישת מושג הבריאות (או, מדויק יותר, תהליכי הבראה וקידום בריאות) כתהליך התחשלות-גם-התעדנות מתמשך, לא רק של השתחררות אדם מכאבים ותחלואה גופניים ונפשיים ניכרים, אלא גם של העמקת משאבי החוסן, הגברת המודעות, אחריות והתפתחות עצמית בכל מימדי החוויה והמשמעות האנושית (הפרטית והחברתית). על פי מודל זה, קידום והשבחת החיוניות, איכות החיים ושמחת החיים, מתאפשרים יותר ויותר ככל שמתבגרים ובאים בימים. מבחינה זו, מוות "בריא" - "מיתת נשיקה" בשיבה טובה ותוך תפקוד נאות, אינו חלום באספמיא.
+        </p>
+        <p>
+          (חשוב לציין שגם רופא 'קונוונציונלי' לחלוטין מבחינת שיטות אבחנה וטיפול, המתייחס למטופל כאל מכלול ולא רק למחלה - ולו ברמת יחסי אנוש - הינו רופא הוליסטי במהותו). בשדה ההוליסטי על סוגיו, יש הדוגלים (ואני ביניהם) בדגש מוצהר על הצורך והאפשרות בבדק בית ושיפוצי התשתית הפיסיולוגית/פסיכולוגית והסביבתית (אקולוגית), הן כרפואה מונעת ורפואה מקדמת בריאות וחוסן במהלך השנים, והן כחלק מובהק (אם כי בלתי ספציפי יחסית) בטיפול במחלות ונזקים קיימים, על פי עקרון "הכלים השלובים" שבבסיס מודל הרפואה המערכתית-הוליסטית.
+        </p>
+        <p>
+          בהתאם, ניתן להתייחס בצורה שיטתית ויסודית לתתי-מערכות (איברים, רקמות ומנגנונים תפקודיים שונים אך משולבים): גופנית - מדובר, בין היתר, בתזונה ועיכול, הפרשות למיניהן, נשימה, זרימת דם ולימפה, חיסוניות, הורמונליות, מוח, עצבים ואברי החושים, שלד ורקמותיו הרכות - כולל שרירים - ובהקשרם, יציבה ותנועתיות; היבטים נפשיים - שכליים/תודעתיים ורגשיים והתנהגותיים, כולל במיוחד יכולת העמידה בלחצים ומתחים למיניהם, בקרה ושליטה עצמית, תקשורת והשתלבות חברתית, יצירתיות ועוד; סביבה פיסית מיידית (מיקרו-אקולוגיה) - כביגוד, תאורה, רעש, קרינה, איכות האוויר ורמת הכימיקלים במקום המגורים והעבודה וכד'.
+        </p>
+        <p style="margin-bottom: 0;">
+          סברה מוצקה היא, כי בריאות, איכות חיים והתפתחות אישית תלויה במידה מכרעת באורחות חייו של האדם דהיינו - השקפותיו, ערכיו, החלטותיו והרגליו היומיומיים (כתזונה, פעילות גופנית, היגיינה מנטלית, רגשית וסביבתית וכד'); כמו כן, באחריותו וביכולתו של כל אדם בוגר ובר-דעת לבחור ולהשתמש בשיטות, כלים וחומרים נאותים כדי למנוע מחלות ע"י תחזוק המערכת, לטיפול עצמי יעיל בבעיות נתונות (כולל - במפורש - הכרת הצורך, ולפעמים החיוניות, בהשגחה ומעורבות מקצועיים במצבים שונים), ולקידום מתמשך של בריאות וחיוניות במהלך החיים.
+        </p>
+      </article>
+
+      <!-- מאמר 2 -->
+      <article class="article-card" style="margin-bottom: 0;">
+        <h3>2) בריאות הוליסטית ורפואת אורחות חיים (כגורמי סיכוי): 'להוסיף שנים לחיים וחיים לשנים'</h3>
+        <div class="article-meta">
+          נכתב במאי 2009 &bull; סקירה כללית, ממעוף הציפור, על בריאות/רפואה הוליסטית (מערכתית, משולבת) מודרנית, מבוססת-ראיות-מדעיות והשלכותיה בכל מצב בריאותי ובכל גיל.
+        </div>
+        <p>
+          'בריאות הוליסטית' נתפסת כאיזון דינמי בכל אדם בהיותו מכלול משולב: יחידה עצמאית רבת תחומים ורבדים נפשית וגופנית, במסגרת ותוך יחסי גומלין עם מערכות חברתיות ואקולוגיות אליהן הוא משתייך.
+        </p>
+        <p>
+          אורחות חיים: מכלול האופנים בהם אדם בוחר להתנהל ולנהל את חייו מבחינה נפשית (שכלית, רגשית, אינטואיטיבית) גופנית (על מכלול תתי המערכות) ומיקרו-סביבתית (חברתיות ואקולוגיות); הרגלי התנהגות פנימית/ סובייקטיבית וחיצונית/אובייקטיבית.
+        </p>
+        <p>
+          ציר מרכזי הינו הקשר בין אורחות חיים נכונים דיים, לבין שימור, שיקום ואף קידום מצטבר של בריאות האדם, תפקודו ואיכות חייו במהלך ימים ושנים. זאת, באופן מיוחד בנוגע לחוסן ואופני התמודדות במצבי לחץ, מועקה ואי-ודאות חריפים או ממושכים, וכן בהקשרים של התפתחות והשבחה אישית והדדית (משפחתית וקהילתית).
+        </p>
+        <p>
+          אורחות חיים נאותים דיים ושילוביהם המושכלים, מסוגלים לגרום או לפחות לתרום לא רק למניעה או להאטה של מחלות כרוניות ניווניות רבות, אלא גם להפיכותן: יש מידע רב, מגוון ומעורר תקווה גם בנוגע לגרועות ולמסוכנות שבהן (הן עלולות כמובן לצוץ שוב כתהליכי תורפה פוטנציאליים, כאשר תנאים משתנים לרעה), כולל באשר להשפעת אורחות חיים על התבטאות נטיות גנטיות וכן בנוגע לגמישותו הפוטנציאלית של ה'אופי'.
+        </p>
+        <p>
+          אכן כן: הזיקנה -- בהגדרתה כפונקציה מורכבת של תשלובת הפרעות תפקודיות ברקמות, אברים ופעילויות נפשיות בכל רגע נתון -- הינה תהליך בר מניעה והפיך יחסית, ברמה העקרונית אך גם המעשית מאוד. ניתן לבוא בימים, ולהתבגר כרונולוגית גם בגילאים מופלגים-- בלי להזקן (במובן החולני של המילה) באופן גורף, מתמשך ומחמיר. העור אולי יתקמט (הצטברות נזקי שמש, שפע דאגות-יתר ואולי סיגריות) אך המוח ויתר הרקמות והתפקודים -- אפשרי מאוד ששישארו או אף ישובו להיות צעירים בהחלט, בהתחשב גם בעליות ומורדות סבירים אשר קורים בכל גיל . העלומים היא פונקציה מורכבת ודינאמית.....
+        </p>
+        <p>
+          כל זאת בהקשר לאורחות חיים – ובנוסף, פלאי הטכנולוגיה הביו-רפואית: תאי גזע, הנדסה גנטית, ביו-הנדסה תרופות מעולות, השתלות ועוד; אך אלה למעשה מהווים ויהוו את הרפואה המשלימה המודרנית! 'רפואת אורחות חיים' -- רפואת תשתיות הבריאות -- הינה להלכה ולמעשה הליבה, המכנה משותף וציר מרכזי לכל הגישות והאסכולות בשדה הבריאות, כולל בקצב גובר ברפואה ה'קונוונציונאלית' בכ- 20-30 השנים האחרונות.
+        </p>
+        <p>
+          תתי נושאים בשדה אורחות החיים: דפוסי חשיבה, רגש, התנהגות ותקשורת וכן, ניהול מתחים/רוגע ויצירתיות; נשימה; תזונה\נוזלים; תנועתיות (יציבה, שינויי תנוחה, תזוזה שגרתית, התמתחויות יומיומיות, הרפייה שרירית, קואורדינציה ועוד) ופעילות גופנית (אירובית ואנאירובית); סביבתיות מיקרו- ומקרו-אקולוגית; שונות -- שינה, איזון בין עבודה, מנוחה, נופש/בילוי/בידור/משחק (כולל פעילות גופנית בשעות הפנאי) ופעילות יצירתית, מיניות, הרגלי צריכת חומרים, למידה והשתלמות בדרכים לעזרה עצמית (והדדית) באשר להפרעות/מחלות נפוצות ועוד.
+        </p>
+        <p>
+          אורחות חיים, כגורמי סיכון או סיכוי, כפונקציה של: פתיחות ומודעות; רצון וכוח רצון; לימוד/התעדכנות/השתלמות בהתנהלות בריאה, כולל בטיפוח של מודעות גוברת ומשמעת/שליטה עצמית איתנה-גם-גמישה, בזמן אמת; יישום וביצוע – (כולל התאוששות מכישלון ביצועי, ומינופו להמשך מוצלח יותר) – יום ביומו, רגע ברגעו (ורצוי – רגע ברוגעו!); זאת ניתן לפתח ולטפח.
+        </p>
+        <p style="margin-bottom: 0;">
+          לסיכום, יושם דגש על הצורך באחריות, התנהלות ועזרה עצמיים נאותים ככל הניתן (בכפוף לתנאים אובייקטיביים שונים), תוך תמיכה והדדיות משפחתית/קהילתית כמתבקש, והסתייעות לפי הצורך בעזרה מקצועית מתאימה, ועל האפשרויות לממשם היטב ע"י איסוף מידע מהימן וטיפוח כלים ויכולות יעילים – כל מקרה או תקופה, לגופם. תוצאת אימוץ גישה פעילה זאת: העצמת הסיכוי לשימור ולקידום גובר של בריאות במהלך ימים ושנים וכן לשיפור תוחלת ואיכות החיים.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- מקטע צור קשר -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>צור קשר</h2>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info-card">
+          <img
+            class="contact-clinic-img"
+            src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=900&q=80"
+            alt="סביבה ירוקה ורגועה בגליל - ראש פינה"
+            loading="lazy"
+          />
+          <h3>ד"ר שמואל (מולי) רנדור (M.D, N.D)</h3>
+          <p>רפואה הוליסטית כללית (קונוונציונלית ונטורופתית), כולל הדרכת בריאות.</p>
+
+          <div class="contact-item">
+            <span class="contact-icon">טלפון</span>
+            <div>
+              <strong>טלפון נייד:</strong><br>
+              <a href="tel:0545938730" dir="ltr">054-5938730</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-icon">דוא"ל</span>
+            <div>
+              <strong>דוא"ל:</strong><br>
+              <a href="mailto:samrandor@gmail.com" dir="ltr">samrandor@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-icon">כתובת</span>
+            <div>
+              <strong>כתובת הקליניקה:</strong><br>
+              <a href="https://maps.google.com/?q=השיטה+3,+ראש+פינה+12000" target="_blank" rel="noopener">השיטה 3, ראש פינה 12000</a>
+              <div class="nav-apps">
+                <a class="nav-pill" href="https://maps.google.com/?q=השיטה+3,+ראש+פינה+12000" target="_blank" rel="noopener">Google Maps</a>
+                <a class="nav-pill" href="https://waze.com/ul?p=השיטה+3,+ראש+פינה+12000&ll=32.969858,35.545178&navigate=yes" target="_blank" rel="noopener">Waze</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-icon">פייסבוק</span>
+            <div>
+              <strong>רשתות חברתיות ואתר:</strong><br>
+              <a href="https://www.facebook.com/shmuel.randor" target="_blank" rel="noopener">עמוד הפייסבוק של ד"ר שמואל רנדור</a><br>
+              <span dir="ltr">www.randor-holistics.co.il</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h3>שליחת פנייה לד"ר רנדור</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="senderName">שם מלא *</label>
+              <input type="text" id="senderName" required placeholder="הכנס/י את שמך" />
+            </div>
+            <div class="form-group">
+              <label for="senderPhone">טלפון לחזרה *</label>
+              <input type="tel" id="senderPhone" required placeholder="054-0000000" />
+            </div>
+            <div class="form-group">
+              <label for="senderSubject">נושא הפנייה</label>
+              <input type="text" id="senderSubject" placeholder="ייעוץ פרטני / הרצאה / סדנה / קורס" />
+            </div>
+            <div class="form-group">
+              <label for="senderMessage">תוכן ההודעה *</label>
+              <textarea id="senderMessage" rows="5" required placeholder="כתוב/י כאן את פרטי הפנייה..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">שלח פנייה בדוא"ל</button>
+            <p class="form-note">
+              לחיצה על הכפתור תפתח הודעת דוא"ל מוכנה לשליחה אל <strong>samrandor@gmail.com</strong>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- פוטר -->
+  <footer>
+    <p><strong>ד"ר שמואל רנדור - רפואה הוליסטית והדרכת בריאות</strong></p>
+    <div class="footer-links">
+      <a href="#home">בית</a>
+      <a href="#services">שירותים</a>
+      <a href="#about">אודות</a>
+      <a href="#contact">צור קשר</a>
+      <a href="#lectures">הרצאות סדנאות וקורסים</a>
+      <a href="#holistic">בריאות הוליסטית - מהי ?</a>
+      <a href="https://www.facebook.com/shmuel.randor" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <p>זכויות יוצרים © 2026 כל הזכויות שמורות</p>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+      });
+    });
+
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const serviceCards = document.querySelectorAll('.service-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const selected = btn.getAttribute('data-filter');
+        serviceCards.forEach(card => {
+          if (selected === 'all' || card.getAttribute('data-category') === selected) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    const expandButtons = document.querySelectorAll('[data-expand]');
+    const fullPanels = document.querySelectorAll('.service-full-panel');
+
+    expandButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-expand');
+        const targetPanel = document.getElementById(targetId);
+        const isAlreadyOpen = targetPanel.classList.contains('open');
+
+        fullPanels.forEach(p => p.classList.remove('open'));
+        expandButtons.forEach(b => {
+          b.classList.remove('active-toggle');
+          b.textContent = 'קרא עוד — פירוט מלא ↓';
+        });
+
+        if (!isAlreadyOpen && targetPanel) {
+          targetPanel.classList.add('open');
+          btn.classList.add('active-toggle');
+          btn.textContent = 'סגור פירוט ↑';
+          targetPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-close-panel]').forEach(closeBtn => {
+      closeBtn.addEventListener('click', () => {
+        fullPanels.forEach(p => p.classList.remove('open'));
+        expandButtons.forEach(b => {
+          b.classList.remove('active-toggle');
+          b.textContent = 'קרא עוד — פירוט מלא ↓';
+        });
+        document.getElementById('services').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('senderName').value.trim();
+      const phone = document.getElementById('senderPhone').value.trim();
+      const subject = document.getElementById('senderSubject').value.trim() || 'פנייה מהאתר';
+      const message = document.getElementById('senderMessage').value.trim();
+
+      const body = `שלום ד"ר רנדור,\n\nשם הפונה: ${name}\nטלפון לחזרה: ${phone}\n\nתוכן ההודעה:\n${message}`;
+      const mailtoLink = `mailto:samrandor@gmail.com?subject=${encodeURIComponent(subject + ' - ' + name)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailtoLink;
+    });
+  </script>
+</body>
+</html>
