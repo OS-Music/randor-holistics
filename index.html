@@ -67,9 +67,9 @@
 
     .nav-container {
       width: 100%;
-      max-width: 1440px;
+      max-width: 1480px;
       margin: 0 auto;
-      padding: 0.75rem 2rem;
+      padding: 0.75rem 1.75rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -80,8 +80,9 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.7rem;
       text-decoration: none;
+      flex-shrink: 0;
     }
 
     .brand-mark {
@@ -106,14 +107,14 @@
 
     .brand-title {
       font-family: 'Heebo', sans-serif;
-      font-size: 1.18rem;
+      font-size: 1.12rem;
       font-weight: 600;
       color: var(--primary-dark);
       line-height: 1.25;
     }
 
     .brand-sub {
-      font-size: 0.83rem;
+      font-size: 0.82rem;
       color: var(--text-muted);
     }
 
@@ -131,18 +132,21 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 0.25rem;
+      align-items: center;
+      gap: 0.2rem;
       flex-wrap: wrap;
     }
 
     nav a {
+      display: inline-block;
       text-decoration: none;
       color: var(--text-main);
       font-family: 'Heebo', sans-serif;
       font-weight: 500;
-      font-size: 0.95rem;
-      padding: 0.5rem 0.85rem;
+      font-size: 0.94rem;
+      padding: 0.48rem 0.72rem;
       border-radius: 6px;
+      white-space: nowrap;
       transition: all 0.2s ease;
     }
 
@@ -1092,6 +1096,32 @@
     }
 
     /* רספונסיביות */
+    @media (max-width: 1120px) {
+      .nav-toggle {
+        display: block;
+      }
+
+      nav {
+        width: 100%;
+        display: none;
+      }
+
+      nav.open {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 0.5rem;
+      }
+
+      nav a {
+        display: block;
+        padding: 0.6rem 0.85rem;
+      }
+    }
+
     @media (max-width: 860px) {
       .sites-intro-split,
       .lectures-banner-strip,
@@ -1120,29 +1150,6 @@
       .nav-container {
         padding-left: 1.15rem;
         padding-right: 1.15rem;
-      }
-
-      .nav-toggle {
-        display: block;
-      }
-
-      nav {
-        width: 100%;
-        display: none;
-      }
-
-      nav.open {
-        display: block;
-      }
-
-      nav ul {
-        flex-direction: column;
-        padding-top: 0.5rem;
-      }
-
-      nav a {
-        display: block;
-        padding: 0.6rem 0.85rem;
       }
 
       .about-card,
@@ -1213,6 +1220,7 @@
       <div class="hero-cta">
         <a href="#about" class="btn btn-white">אודות ד"ר רנדור</a>
         <a href="#services" class="btn btn-outline">שירותים</a>
+        <a href="#lectures" class="btn btn-outline">הרצאות סדנאות וקורסים</a>
         <a href="#contact" class="btn btn-outline">צור קשר</a>
       </div>
     </div>
