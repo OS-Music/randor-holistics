@@ -178,23 +178,35 @@
       border: 1px solid rgba(255, 255, 255, 0.28);
       padding: 0.3rem 1rem;
       border-radius: 999px;
-      margin-bottom: 1rem;
+      margin-bottom: 1.15rem;
     }
 
-    .hero h1 {
+    .hero-title-block {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-name-he,
+    .hero-name-en {
       font-family: 'Heebo', sans-serif;
-      font-size: clamp(2.2rem, 4.5vw, 3.1rem);
+      font-size: clamp(2.15rem, 4.4vw, 3rem);
       font-weight: 600;
-      margin-bottom: 0.25rem;
+      line-height: 1.22;
       letter-spacing: -0.01em;
     }
 
-    .hero-en {
-      font-size: 1.2rem;
-      opacity: 0.92;
+    .hero-name-en {
       direction: ltr;
-      margin-bottom: 1.5rem;
-      font-weight: 300;
+      margin-top: 0.15rem;
+    }
+
+    .hero-degrees {
+      font-family: 'Heebo', sans-serif;
+      font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+      font-weight: 400;
+      direction: ltr;
+      opacity: 0.94;
+      margin-top: 0.35rem;
+      letter-spacing: 0.05em;
     }
 
     .hero-credentials {
@@ -326,6 +338,165 @@
       background: var(--sage);
       margin: 0.6rem auto 0;
       border-radius: 3px;
+    }
+
+    /* אודות + תמונת פורטרט של ד"ר שמואל רנדור */
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .about-header-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.25rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.8rem;
+      margin-bottom: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .doctor-portrait-frame {
+      flex-shrink: 0;
+      width: 210px;
+      background: var(--warm-sand);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 0.55rem;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+
+    .doctor-portrait-frame img {
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 8px;
+    }
+
+    .doctor-portrait-caption {
+      font-size: 0.84rem;
+      color: var(--primary-dark);
+      font-weight: 600;
+      margin-top: 0.45rem;
+    }
+
+    .about-top {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .about-top h3 {
+      font-family: 'Heebo', sans-serif;
+      font-size: 1.6rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.45rem;
+    }
+
+    .about-subtitle {
+      font-weight: 600;
+      color: var(--primary);
+      font-size: 1.08rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .cv-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      padding: 0.35rem 0.95rem;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .about-card h4 {
+      font-family: 'Heebo', sans-serif;
+      font-size: 1.18rem;
+      color: var(--primary-dark);
+      margin: 1.65rem 0 0.85rem;
+    }
+
+    .styled-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .styled-list li {
+      position: relative;
+      padding-right: 1.4rem;
+    }
+
+    .styled-list li::before {
+      content: "•";
+      position: absolute;
+      right: 0;
+      top: -0.05rem;
+      color: var(--primary);
+      font-size: 1.4rem;
+      line-height: 1.2;
+    }
+
+    details.publications-box {
+      margin-top: 1.85rem;
+      background: var(--warm-sand);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.2rem 1.4rem;
+    }
+
+    details.publications-box summary {
+      font-family: 'Heebo', sans-serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    details.publications-box summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.publications-box summary::after {
+      content: "+";
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    details.publications-box[open] summary::after {
+      content: "−";
+    }
+
+    .pub-list {
+      direction: ltr;
+      text-align: left;
+      margin-top: 1.1rem;
+      padding-left: 1.3rem;
+      font-size: 0.95rem;
+    }
+
+    .pub-list li {
+      margin-bottom: 0.75rem;
+    }
+
+    .pub-subhead {
+      direction: ltr;
+      text-align: left;
+      font-weight: 700;
+      margin-top: 1.2rem;
+      color: var(--primary-dark);
     }
 
     /* פס פתיחה של עמוד השירותים */
@@ -528,165 +699,6 @@
 
     .service-full-panel li {
       margin-bottom: 0.65rem;
-    }
-
-    /* אודות + תמונת פורטרט של ד"ר שמואל רנדור */
-    .about-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: var(--radius);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .about-header-grid {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2.25rem;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 1.8rem;
-      margin-bottom: 1.8rem;
-      flex-wrap: wrap;
-    }
-
-    .doctor-portrait-frame {
-      flex-shrink: 0;
-      width: 210px;
-      background: var(--warm-sand);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 0.55rem;
-      box-shadow: var(--shadow-sm);
-      text-align: center;
-    }
-
-    .doctor-portrait-frame img {
-      width: 100%;
-      height: 245px;
-      object-fit: cover;
-      object-position: top center;
-      border-radius: 8px;
-    }
-
-    .doctor-portrait-caption {
-      font-size: 0.84rem;
-      color: var(--primary-dark);
-      font-weight: 600;
-      margin-top: 0.45rem;
-    }
-
-    .about-top {
-      flex: 1;
-      min-width: 260px;
-    }
-
-    .about-top h3 {
-      font-family: 'Heebo', sans-serif;
-      font-size: 1.6rem;
-      color: var(--primary-dark);
-      margin-bottom: 0.45rem;
-    }
-
-    .about-subtitle {
-      font-weight: 600;
-      color: var(--primary);
-      font-size: 1.08rem;
-      margin-bottom: 0.85rem;
-    }
-
-    .cv-badge {
-      display: inline-block;
-      background: var(--primary-light);
-      color: var(--primary-dark);
-      padding: 0.35rem 0.95rem;
-      border-radius: 6px;
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-
-    .about-card h4 {
-      font-family: 'Heebo', sans-serif;
-      font-size: 1.18rem;
-      color: var(--primary-dark);
-      margin: 1.65rem 0 0.85rem;
-    }
-
-    .styled-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .styled-list li {
-      position: relative;
-      padding-right: 1.4rem;
-    }
-
-    .styled-list li::before {
-      content: "•";
-      position: absolute;
-      right: 0;
-      top: -0.05rem;
-      color: var(--primary);
-      font-size: 1.4rem;
-      line-height: 1.2;
-    }
-
-    details.publications-box {
-      margin-top: 1.85rem;
-      background: var(--warm-sand);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      padding: 1.2rem 1.4rem;
-    }
-
-    details.publications-box summary {
-      font-family: 'Heebo', sans-serif;
-      font-weight: 600;
-      font-size: 1.15rem;
-      color: var(--primary-dark);
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    details.publications-box summary::-webkit-details-marker {
-      display: none;
-    }
-
-    details.publications-box summary::after {
-      content: "+";
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    details.publications-box[open] summary::after {
-      content: "−";
-    }
-
-    .pub-list {
-      direction: ltr;
-      text-align: left;
-      margin-top: 1.1rem;
-      padding-left: 1.3rem;
-      font-size: 0.95rem;
-    }
-
-    .pub-list li {
-      margin-bottom: 0.75rem;
-    }
-
-    .pub-subhead {
-      direction: ltr;
-      text-align: left;
-      font-weight: 700;
-      margin-top: 1.2rem;
-      color: var(--primary-dark);
     }
 
     /* הרצאות סדנאות וקורסים */
@@ -1024,7 +1036,7 @@
       background: var(--primary-dark);
       color: #e8f2f0;
       text-align: center;
-      padding: 2.5rem 2rem;
+      padding: 2.5rem 2rem 4.5rem;
       font-size: 0.95rem;
     }
 
@@ -1043,6 +1055,40 @@
 
     footer a:hover {
       text-decoration: underline;
+    }
+
+    /* כפתור צף ווטסאפ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 22px;
+      left: 22px;
+      z-index: 1200;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background-color: #25d366;
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Heebo', sans-serif;
+      font-weight: 600;
+      font-size: 0.98rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      box-shadow: 0 6px 20px rgba(21, 95, 49, 0.32);
+      transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(21, 95, 49, 0.42);
+    }
+
+    .whatsapp-float svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+      flex-shrink: 0;
     }
 
     /* רספונסיביות */
@@ -1105,6 +1151,13 @@
       .service-full-panel {
         padding: 1.4rem;
       }
+
+      .whatsapp-float {
+        bottom: 16px;
+        left: 16px;
+        padding: 0.65rem 1.05rem;
+        font-size: 0.92rem;
+      }
     }
   </style>
 </head>
@@ -1117,18 +1170,18 @@
         <span class="brand-mark">ש"ר</span>
         <span class="brand-text">
           <span class="brand-title">ד"ר שמואל רנדור - רפואה הוליסטית והדרכת בריאות</span>
-          <span class="brand-sub">Dr. Shmuel Randor .M.D., N.D &bull; ראש פינה</span>
+          <span class="brand-sub">Dr. Shmuel Randor M.D., N.D. &bull; ראש פינה</span>
         </span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="תפריט ניווט">☰</button>
       <nav id="mainNav">
         <ul>
           <li><a href="#home">בית</a></li>
-          <li><a href="#services">שירותים</a></li>
           <li><a href="#about">אודות</a></li>
-          <li><a href="#contact">צור קשר</a></li>
+          <li><a href="#services">שירותים</a></li>
           <li><a href="#lectures">הרצאות סדנאות וקורסים</a></li>
           <li><a href="#holistic">בריאות הוליסטית - מהי ?</a></li>
+          <li><a href="#contact">צור קשר</a></li>
         </ul>
       </nav>
     </div>
@@ -1138,8 +1191,12 @@
   <section id="home" class="hero">
     <div class="hero-inner">
       <div class="hero-eyebrow">גוף &bull; נפש &bull; סביבה</div>
-      <h1>ד"ר שמואל רנדור</h1>
-      <div class="hero-en">Dr. Shmuel Randor .M.D., N.D</div>
+
+      <div class="hero-title-block">
+        <h1 class="hero-name-he">ד"ר שמואל רנדור</h1>
+        <div class="hero-name-en">Dr. Shmuel Randor</div>
+        <div class="hero-degrees">M.D., N.D.</div>
+      </div>
 
       <div class="hero-credentials">
         <strong>עוסק ברפואה משולבת:</strong><br>
@@ -1154,9 +1211,91 @@
       </p>
 
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-white">צור קשר</a>
+        <a href="#about" class="btn btn-white">אודות ד"ר רנדור</a>
         <a href="#services" class="btn btn-outline">שירותים</a>
-        <a href="#lectures" class="btn btn-outline">הרצאות סדנאות וקורסים</a>
+        <a href="#contact" class="btn btn-outline">צור קשר</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- מקטע אודות (ראשון מהמקטעים, כולל תמונת פורטרט) -->
+  <section id="about" class="alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <h2>אודות</h2>
+      </div>
+
+      <div class="about-card">
+        <div class="about-header-grid">
+          <div class="doctor-portrait-frame">
+            <img
+              src="400_5fc8bbcd80c49.webp"
+              alt="ד&quot;ר שמואל רנדור (M.D., N.D)"
+            />
+            <div class="doctor-portrait-caption">ד"ר שמואל רנדור</div>
+          </div>
+
+          <div class="about-top">
+            <h3>ד"ר שמואל רנדור (M.D., N.D) | Dr. Samuel Randor</h3>
+            <div class="about-subtitle">
+              -- רפואה הוליסטית - קונוונציונלית (כללית) ומשלימה (נטורופתית)<br>
+              -- הדרכת בריאות (רפואת אורחות חיים)
+            </div>
+            <span class="cv-badge">תקציר קורות חיים 2021 &bull; פרטים נוספים זמינים למעוניינים.</span>
+          </div>
+        </div>
+
+        <p>
+          דוקטור לרפואה קונוונציונלית-כללית (M.D. -- ביה"ס לרפואה ע"ש סקלר, ת"א, 1976) ודוקטור לרפואה נטורופתית (John Bastyr College -- N.D., סיאטל, ארה"ב, 1988) בהכשרתו.
+        </p>
+        <p style="margin-top: 0.85rem;">
+          ציר מרכזי בפעילותו המקצועית הינו הדרכת בריאות (רפואת אורחות חיים), רפואה מונעת, טיפולית/משקמת וכן, מקדמת ומשביחת בריאות ואיכות חיים (מעֵבֵר לחסר של תסמינים או ממצאים חולניים) במהלך ימים ושנים, כולל בגילאים מבוגרים מאוד.
+        </p>
+        <p style="margin-top: 0.85rem;">
+          פעל במסגרות אקדמיות וכן בפעילות מדעית/מחקרית בתחומים שונים ביניהם מחלת האפילפסיה, שיקום, שימושים ורעילות של חומרים טבעיים, ביו-רפואה תיאורטית ועוד (רשימת פרסומים – להלן).
+        </p>
+
+        <h4>בין המוסדות והאירגונים בהם הועסק:</h4>
+        <ul class="styled-list">
+          <li><strong>אוניברסיטת ווטרלו</strong> בווטרלו-קיצ'נר, אונטריו, קנדה (כיועץ/איש-משאב אקדמי במחלקה ללימודים רב-תחומיים).</li>
+          <li><strong>בית החולים לילדים (The sick children hospital)</strong> בטורונטו, אונטריו, קנדה (כיועץ קליני לשימושי ורעילות חומרים טבעיים במחלקה לפרמקולוגיה וטוקסיקולוגיה).</li>
+          <li><strong>הקולג' לרפואה נטורופתית</strong>, בטורונטו – כנ"ל (כמרצה לפתולוגיה ולאבחנה מבדלת).</li>
+          <li><strong>בית החולים אסף הרופא</strong> (במרפאת שירותי רפואה משלימה, כמתאם מחקר, בקרת איכות קלינית והסברה קהילתית).</li>
+          <li><strong>בתי הספר לסיעוד בצפת ובחיפה</strong> (הנחית קורסים בנושאי רפואה משלימה ואורחות חיים).</li>
+          <li><strong>המכללה האקדמית תל חי, מכללת רידמן ומכללות נוספות</strong> (מרצה למדעים בלימודי רפואה משלימה, תוך דגש על נושאי אורחות החיים כמרכזיים לפיזיולוגיה, פתולוגיה והתייחסות קלינית לכל מטופל).</li>
+          <li><strong>מכון 'משאבים'</strong> (לפיתוח משאבי התמודדות, מיסודו של פרופ' מולי להד, מסונף למכללה האקדמית תל חי) בקרית שמונה (כמטפל רב-תחומי בפוסט-טראומה וכמרצה/מנחה לכוחות ההצלה ולגופי חירום אחרים ברחבי הארץ בניהול מתחים יעיל ברמה האישית/משפחתית/קהילתית במצבי לחץ מובהקים; הכין ערכת הדרכה לשימור וקידום בריאות באמצעות אורחות חיים נאותים, המיועד לכוחות ההצלה בישראל (משטרה, מכבי אש, מד"א וזק"א); והדריך צוותים נבחרים כסוכני שינוי לקידום בריאות בסביבותיהם המקצועיות; כמו-כן, פיתח תוכנית להכשרת מדריכי בריאות מוסמכים, מטעם 'משאבים' ובחסות המכללה האקדמית תל-חי, עם יישום ראשון בקרב קהילת יוצאי אתיופיה, בשיתוף עם עמותת 'טנא בריאות' בחדרה).</li>
+          <li><strong>עמותת 'הלבב' בצפת</strong> (כמקדם בריאות קהילתי, בין היתר בשיתוף עם עירית צפת ועמותת 'אנוש').</li>
+          <li><strong>אוניברסיטת בן גוריון</strong> (מרצה אורח; סדנאות השתלמות רופאי משפחה של קופ"ח כללית, מחוז צפון, ברפואת אורחות חיים).</li>
+          <li><strong>אוניבסיטת בר אילן</strong> (מרצה אורח; הכשרת מטפלים באוטיזם כנאמני – סוכני שינוי -- אורחות חיים נאותים במרכז 'מיפנה' בראש פינה; סדנת ניהול מתחים לסטודנטים בבית הספר לרפואה בצפת).</li>
+          <li><strong>הסוכנות היהודית</strong> (הכשרת צוותים במרכזי קליטה כנאמני אורחות חיים מקדמי בריאות ואיכות חיים).</li>
+          <li><strong>קופת חולים 'כללית-משלימה'</strong> בטבריה, קריית שמונה, טבריה ועוד (כרופא מאבחן).</li>
+        </ul>
+
+        <h4>כמו-כן:</h4>
+        <ul class="styled-list">
+          <li>הנחה מאות הרצאות, סדנאות וחוגים לקהלים מגוונים במרכזים קהילתיים, בתי-ספר, מקומות עבודה, בתי אבות ומועדני ותיקים, קיבוצים, קבוצות וארגונים פרטיים שונים – בנושאי בריאות הוליסטית ואורחות חיים כגורמי סיכון או סיכוי.</li>
+          <li>השתתף בתכנון ארוך טווח להקמת חוג בקידום בריאות לתואר ראשון במסגרת המכללה האקדמית תל חי.</li>
+          <li>השתתף בתכנון הקמת מכון למחקר וליישומים קליניים של אורחות חיים תומכי ומקדמי בריאות באגף המחקר בבית החולים זיו, צפת.</li>
+          <li>במהלך השנים, במקביל לכל היתר, מפעיל קליניקה פרטית ברפואה (קונוונציונאלית-כללית ונטורופתית) והדרכת בריאות הוליסטיים (מערכתיים), פרטנית ומשפחתית.</li>
+        </ul>
+
+        <details class="publications-box" open>
+          <summary>פרסומים מדעיים (Publications &amp; Abstracts)</summary>
+          <ol class="pub-list">
+            <li>Randor S. Simultaneous EEG-intracellular recording in experimental epilepsy in cats. M.D. thesis, Tel-Aviv Medical School, 1979.</li>
+            <li>Koren, G., Randor S., Martin. S., Daneman, D. Maternal ginseng use associated with neonatal androgenization. <em>JAMA</em> 264:2866, 1990. Comment in <em>JAMA</em> 265:1828, 1991.</li>
+            <li>Randor S., Colanecchia T., Tirona, R.G., Gladstone, D., Kindack, G.G, and Koren, G. Reproductive risks of common medicinal plants. In Koren G. (Ed.), <em>Fetal-Material Toxicity</em>. Marcel Dekker Inc., New-York, New-York, 2nd. Edition. 1992. pp. 447-514.</li>
+            <li>Shear NH, Malkiewicz IM, Klein D, Koren G, Randor S, Neuman MG. Acetaminophen-induced toxicity to human epidermoid cell line A431 and hepatoblastoma cell line Hep G2, in vitro, is diminished by silymarin. <em>Skin Pharmacol.</em> 1995;8(6):279-91</li>
+            <li>Randor, S. Systems approach to the healing/ailing continuum. Unpublished manuscript, 1984. (An updated version is in preparation for publication).</li>
+            <li>Randor S. Epileptolytic neuro-behavioral and other non-pharmacological therapies. In preparation for publication</li>
+          </ol>
+
+          <div class="pub-subhead">Abstracts / Presentations:</div>
+          <ol class="pub-list">
+            <li>Neuman, M., Koren, G., Randor, S., Yang, S., Roberts, E.A. Protective effects of silymarin on hepatocellular toxicity of acetaminophen in human cell lines in vitro. Presented at the Combined meeting of the Royal College of Physicians and Surgeons of Canada and the Canadian Society for clinical Investigation, August, 1991. Published in <em>Can. Clin. Invest. Med.</em> 40A (Suppl. 4) Abst. 112, p. 86, 1991.</li>
+            <li>Randor, S. General and reproductive aspects of natural substances in modern medicine: an overview. Presented at the American Association of Clinical Toxicology, Satellite Workshop: How to Evaluate Reproduction Risk. Toronto, Oct. 1991.</li>
+          </ol>
+        </details>
       </div>
     </div>
   </section>
@@ -1359,90 +1498,8 @@
     </div>
   </section>
 
-  <!-- מקטע אודות (כולל תמונתו של ד"ר שמואל רנדור) -->
-  <section id="about" class="alt-bg">
-    <div class="container">
-      <div class="section-header">
-        <h2>אודות</h2>
-      </div>
-
-      <div class="about-card">
-        <div class="about-header-grid">
-          <div class="doctor-portrait-frame">
-            <img
-              src="400_5fc8bbcd80c49.webp"
-              alt="ד&quot;ר שמואל רנדור (M.D., N.D)"
-            />
-            <div class="doctor-portrait-caption">ד"ר שמואל רנדור</div>
-          </div>
-
-          <div class="about-top">
-            <h3>ד"ר שמואל רנדור (M.D., N.D) | Dr. Samuel Randor</h3>
-            <div class="about-subtitle">
-              -- רפואה הוליסטית - קונוונציונלית (כללית) ומשלימה (נטורופתית)<br>
-              -- הדרכת בריאות (רפואת אורחות חיים)
-            </div>
-            <span class="cv-badge">תקציר קורות חיים 2021 &bull; פרטים נוספים זמינים למעוניינים.</span>
-          </div>
-        </div>
-
-        <p>
-          דוקטור לרפואה קונוונציונלית-כללית (M.D. -- ביה"ס לרפואה ע"ש סקלר, ת"א, 1976) ודוקטור לרפואה נטורופתית (John Bastyr College -- N.D., סיאטל, ארה"ב, 1988) בהכשרתו.
-        </p>
-        <p style="margin-top: 0.85rem;">
-          ציר מרכזי בפעילותו המקצועית הינו הדרכת בריאות (רפואת אורחות חיים), רפואה מונעת, טיפולית/משקמת וכן, מקדמת ומשביחת בריאות ואיכות חיים (מעֵבֵר לחסר של תסמינים או ממצאים חולניים) במהלך ימים ושנים, כולל בגילאים מבוגרים מאוד.
-        </p>
-        <p style="margin-top: 0.85rem;">
-          פעל במסגרות אקדמיות וכן בפעילות מדעית/מחקרית בתחומים שונים ביניהם מחלת האפילפסיה, שיקום, שימושים ורעילות של חומרים טבעיים, ביו-רפואה תיאורטית ועוד (רשימת פרסומים – להלן).
-        </p>
-
-        <h4>בין המוסדות והאירגונים בהם הועסק:</h4>
-        <ul class="styled-list">
-          <li><strong>אוניברסיטת ווטרלו</strong> בווטרלו-קיצ'נר, אונטריו, קנדה (כיועץ/איש-משאב אקדמי במחלקה ללימודים רב-תחומיים).</li>
-          <li><strong>בית החולים לילדים (The sick children hospital)</strong> בטורונטו, אונטריו, קנדה (כיועץ קליני לשימושי ורעילות חומרים טבעיים במחלקה לפרמקולוגיה וטוקסיקולוגיה).</li>
-          <li><strong>הקולג' לרפואה נטורופתית</strong>, בטורונטו – כנ"ל (כמרצה לפתולוגיה ולאבחנה מבדלת).</li>
-          <li><strong>בית החולים אסף הרופא</strong> (במרפאת שירותי רפואה משלימה, כמתאם מחקר, בקרת איכות קלינית והסברה קהילתית).</li>
-          <li><strong>בתי הספר לסיעוד בצפת ובחיפה</strong> (הנחית קורסים בנושאי רפואה משלימה ואורחות חיים).</li>
-          <li><strong>המכללה האקדמית תל חי, מכללת רידמן ומכללות נוספות</strong> (מרצה למדעים בלימודי רפואה משלימה, תוך דגש על נושאי אורחות החיים כמרכזיים לפיזיולוגיה, פתולוגיה והתייחסות קלינית לכל מטופל).</li>
-          <li><strong>מכון 'משאבים'</strong> (לפיתוח משאבי התמודדות, מיסודו של פרופ' מולי להד, מסונף למכללה האקדמית תל חי) בקרית שמונה (כמטפל רב-תחומי בפוסט-טראומה וכמרצה/מנחה לכוחות ההצלה ולגופי חירום אחרים ברחבי הארץ בניהול מתחים יעיל ברמה האישית/משפחתית/קהילתית במצבי לחץ מובהקים; הכין ערכת הדרכה לשימור וקידום בריאות באמצעות אורחות חיים נאותים, המיועד לכוחות ההצלה בישראל (משטרה, מכבי אש, מד"א וזק"א); והדריך צוותים נבחרים כסוכני שינוי לקידום בריאות בסביבותיהם המקצועיות; כמו-כן, פיתח תוכנית להכשרת מדריכי בריאות מוסמכים, מטעם 'משאבים' ובחסות המכללה האקדמית תל-חי, עם יישום ראשון בקרב קהילת יוצאי אתיופיה, בשיתוף עם עמותת 'טנא בריאות' בחדרה).</li>
-          <li><strong>עמותת 'הלבב' בצפת</strong> (כמקדם בריאות קהילתי, בין היתר בשיתוף עם עירית צפת ועמותת 'אנוש').</li>
-          <li><strong>אוניברסיטת בן גוריון</strong> (מרצה אורח; סדנאות השתלמות רופאי משפחה של קופ"ח כללית, מחוז צפון, ברפואת אורחות חיים).</li>
-          <li><strong>אוניבסיטת בר אילן</strong> (מרצה אורח; הכשרת מטפלים באוטיזם כנאמני – סוכני שינוי -- אורחות חיים נאותים במרכז 'מיפנה' בראש פינה; סדנת ניהול מתחים לסטודנטים בבית הספר לרפואה בצפת).</li>
-          <li><strong>הסוכנות היהודית</strong> (הכשרת צוותים במרכזי קליטה כנאמני אורחות חיים מקדמי בריאות ואיכות חיים).</li>
-          <li><strong>קופת חולים 'כללית-משלימה'</strong> בטבריה, קריית שמונה, טבריה ועוד (כרופא מאבחן).</li>
-        </ul>
-
-        <h4>כמו-כן:</h4>
-        <ul class="styled-list">
-          <li>הנחה מאות הרצאות, סדנאות וחוגים לקהלים מגוונים במרכזים קהילתיים, בתי-ספר, מקומות עבודה, בתי אבות ומועדני ותיקים, קיבוצים, קבוצות וארגונים פרטיים שונים – בנושאי בריאות הוליסטית ואורחות חיים כגורמי סיכון או סיכוי.</li>
-          <li>השתתף בתכנון ארוך טווח להקמת חוג בקידום בריאות לתואר ראשון במסגרת המכללה האקדמית תל חי.</li>
-          <li>השתתף בתכנון הקמת מכון למחקר וליישומים קליניים של אורחות חיים תומכי ומקדמי בריאות באגף המחקר בבית החולים זיו, צפת.</li>
-          <li>במהלך השנים, במקביל לכל היתר, מפעיל קליניקה פרטית ברפואה (קונוונציונאלית-כללית ונטורופתית) והדרכת בריאות הוליסטיים (מערכתיים), פרטנית ומשפחתית.</li>
-        </ul>
-
-        <details class="publications-box" open>
-          <summary>פרסומים מדעיים (Publications &amp; Abstracts)</summary>
-          <ol class="pub-list">
-            <li>Randor S. Simultaneous EEG-intracellular recording in experimental epilepsy in cats. M.D. thesis, Tel-Aviv Medical School, 1979.</li>
-            <li>Koren, G., Randor S., Martin. S., Daneman, D. Maternal ginseng use associated with neonatal androgenization. <em>JAMA</em> 264:2866, 1990. Comment in <em>JAMA</em> 265:1828, 1991.</li>
-            <li>Randor S., Colanecchia T., Tirona, R.G., Gladstone, D., Kindack, G.G, and Koren, G. Reproductive risks of common medicinal plants. In Koren G. (Ed.), <em>Fetal-Material Toxicity</em>. Marcel Dekker Inc., New-York, New-York, 2nd. Edition. 1992. pp. 447-514.</li>
-            <li>Shear NH, Malkiewicz IM, Klein D, Koren G, Randor S, Neuman MG. Acetaminophen-induced toxicity to human epidermoid cell line A431 and hepatoblastoma cell line Hep G2, in vitro, is diminished by silymarin. <em>Skin Pharmacol.</em> 1995;8(6):279-91</li>
-            <li>Randor, S. Systems approach to the healing/ailing continuum. Unpublished manuscript, 1984. (An updated version is in preparation for publication).</li>
-            <li>Randor S. Epileptolytic neuro-behavioral and other non-pharmacological therapies. In preparation for publication</li>
-          </ol>
-
-          <div class="pub-subhead">Abstracts / Presentations:</div>
-          <ol class="pub-list">
-            <li>Neuman, M., Koren, G., Randor, S., Yang, S., Roberts, E.A. Protective effects of silymarin on hepatocellular toxicity of acetaminophen in human cell lines in vitro. Presented at the Combined meeting of the Royal College of Physicians and Surgeons of Canada and the Canadian Society for clinical Investigation, August, 1991. Published in <em>Can. Clin. Invest. Med.</em> 40A (Suppl. 4) Abst. 112, p. 86, 1991.</li>
-            <li>Randor, S. General and reproductive aspects of natural substances in modern medicine: an overview. Presented at the American Association of Clinical Toxicology, Satellite Workshop: How to Evaluate Reproduction Risk. Toronto, Oct. 1991.</li>
-          </ol>
-        </details>
-      </div>
-    </div>
-  </section>
-
   <!-- מקטע הרצאות סדנאות וקורסים -->
-  <section id="lectures">
+  <section id="lectures" class="alt-bg">
     <div class="container">
       <div class="section-header">
         <h2>הרצאות סדנאות וקורסים</h2>
@@ -1933,7 +1990,7 @@
   </section>
 
   <!-- מקטע בריאות הוליסטית - מהי ? -->
-  <section id="holistic" class="alt-bg">
+  <section id="holistic">
     <div class="container">
       <div class="section-header">
         <h2>בריאות הוליסטית - מהי ?</h2>
@@ -2036,7 +2093,7 @@
   </section>
 
   <!-- מקטע צור קשר -->
-  <section id="contact">
+  <section id="contact" class="alt-bg">
     <div class="container">
       <div class="section-header">
         <h2>צור קשר</h2>
@@ -2120,16 +2177,30 @@
     </div>
   </section>
 
+  <!-- כפתור ווטסאפ צף -->
+  <a
+    href="https://wa.me/972545938730?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%93%22%D7%A8%20%D7%A8%D7%A0%D7%93%D7%95%D7%A8%20%D7%90%D7%A0%D7%99%20%D7%A4%D7%95%D7%A0%D7%94%20%D7%90%D7%9C%D7%99%D7%99%D7%9A%20%D7%91%D7%A7%D7%A9%D7%A8%20%D7%9C"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="שלח הודעה בווטסאפ"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16.004 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.256.588 4.458 1.706 6.4L3.1 28.8l6.584-1.726a12.74 12.74 0 0 0 6.32 1.666h.006c7.058 0 12.796-5.74 12.796-12.8 0-3.42-1.332-6.636-3.75-9.054A12.716 12.716 0 0 0 16.004 3.2zm0 23.38h-.004a10.6 10.6 0 0 1-5.404-1.48l-.388-.23-3.908 1.024 1.044-3.81-.252-.402a10.578 10.578 0 0 1-1.624-5.682c0-5.864 4.772-10.636 10.64-10.636 2.842 0 5.512 1.108 7.52 3.118a10.568 10.568 0 0 1 3.114 7.522c0 5.866-4.774 10.636-10.638 10.636zm5.836-7.966c-.32-.16-1.892-.934-2.186-1.04-.292-.108-.506-.16-.718.16-.214.32-.826 1.04-1.012 1.254-.186.214-.372.24-.692.08-.32-.16-1.35-.498-2.572-1.588-.95-.848-1.592-1.894-1.778-2.214-.186-.32-.02-.494.14-.652.144-.144.32-.374.48-.56.16-.186.214-.32.32-.534.106-.214.054-.4-.026-.56-.08-.16-.718-1.732-.984-2.372-.26-.624-.524-.54-.718-.55l-.612-.01c-.214 0-.56.08-.852.4-.294.32-1.12 1.094-1.12 2.668 0 1.574 1.146 3.094 1.306 3.308.16.214 2.256 3.444 5.464 4.83.764.33 1.36.526 1.824.674.766.244 1.464.21 2.016.128.614-.092 1.892-.774 2.158-1.52.266-.746.266-1.386.186-1.52-.08-.134-.294-.214-.614-.374z"/>
+    </svg>
+    <span>שלח הודעה בווטסאפ</span>
+  </a>
+
   <!-- פוטר -->
   <footer>
     <p><strong>ד"ר שמואל רנדור - רפואה הוליסטית והדרכת בריאות</strong></p>
     <div class="footer-links">
       <a href="#home">בית</a>
-      <a href="#services">שירותים</a>
       <a href="#about">אודות</a>
-      <a href="#contact">צור קשר</a>
+      <a href="#services">שירותים</a>
       <a href="#lectures">הרצאות סדנאות וקורסים</a>
       <a href="#holistic">בריאות הוליסטית - מהי ?</a>
+      <a href="#contact">צור קשר</a>
       <a href="https://www.facebook.com/shmuel.randor" target="_blank" rel="noopener">Facebook</a>
     </div>
     <p>זכויות יוצרים © 2026 כל הזכויות שמורות</p>
